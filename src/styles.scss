@@ -1,7 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+.main-wrapper {
+    min-height: 100vh;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding-bottom: 20px;
+    background-color: #f7f7f7;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 11px;
+    height: 20px;
+}
+
 .well {
     border: 1px solid #dee2e6;
     border-radius: 4px;
-    padding: 10px 15px;
+    padding: 5px 25px 25px;
     box-shadow: 0 0 6px #e2e2e2;
+    background-color: #fff;
+}
+
+.link-wrap {
+    font-size: 14px;
+
+    .link {
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.logo {
+    width: 140px;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+// Bootstrap override
+
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .title {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px;
+    }
+}
+
+.bg-light {
+    background: #ebebeb !important;
+    box-shadow: 0 2px 2px #9d9d9d;
+}
+
+.user-menu {
+    .nav-link {
+        cursor: pointer;
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        &.open {
+            color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.form-check-input {
+    top: 1.7px;
+    cursor: pointer;
 }
