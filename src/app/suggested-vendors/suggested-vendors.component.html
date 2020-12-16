@@ -1,0 +1,161 @@
+<app-nav [title]="title"></app-nav>
+<div class="container mt-4">
+  <h5 class="mt-4">Loans</h5>
+  <hr/>
+  <div class="row">
+    <div class="col">
+      <table class="table shd">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Type</th>
+            <th scope="col">Interest Rate</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr [ngClass]="{'selected': selectedTable == 0}">
+            <th scope="row">1</th>
+            <td>Direct Farm Ownership</td>
+            <td>2.500%</td>
+            <td>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 0">SELECT</button>
+            </td>
+          </tr>
+          <tr [ngClass]="{'selected': selectedTable == 1}">
+            <th scope="row">2</th>
+            <td>Direct Down Payment</td>
+            <td>Thornton</td>
+            <td>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 1">SELECT</button>
+            </td>
+          </tr>
+          <tr [ngClass]="{'selected': selectedTable == 2}">
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 2">SELECT</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <h5 class="mt-4">Insurance vendors</h5>
+  <hr/>
+  <div class="row">
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 0" [ngClass]="{'selected': isSelectedInsuranceCard == 0}">
+        <div class="pointer ins">
+          <span class="horizontal">Insurance</span>
+        </div>
+        <img src="assets/ace.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">ACE American Insurance Company</h6>
+          <p class="card-text">ACE American Insurance Company operates as an insurance company. The Company offers property and casualty insurance services. ACE American Insurance serves customers worldwide.</p>
+          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 1" [ngClass]="{'selected': isSelectedInsuranceCard == 1}">
+        <div class="pointer ins">
+          <span class="horizontal">Insurance</span>
+        </div>
+        <img src="assets/agri.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">American Agri-Business Insurance Company</h6>
+          <p class="card-text">American Agri Business Insurance Co operates as an insurance company. The Company offers crop insurance services. American Agri Business Insurance serves customers in the United States.</p>
+          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 2" [ngClass]="{'selected': isSelectedInsuranceCard == 2}">
+        <div class="pointer ins">
+          <span class="horizontal">Insurance</span>
+        </div>
+        <img src="assets/hudson.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Hudson Insurance Company</h6>
+          <p class="card-text">Hudson is a market-leading specialty insurer that offers a wide range of property and casualty insurance products to corporations, professional firms , wholesalers and program administrators.</p>
+          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 3" [ngClass]="{'selected': isSelectedInsuranceCard == 3}">
+        <div class="pointer ins">
+          <span class="horizontal">Insurance</span>
+        </div>
+        <img src="assets/crs.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Crop Risk Services, Inc</h6>
+          <p class="card-text">Crop Risk Services is a leading primary crop insurance managing general agent, serving North American farmers with a affordable crop income protection and continue to meet, this challenge.</p>
+          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedSoilCard = 0" [ngClass]="{'selected': isSelectedSoilCard == 0}">
+        <div class="pointer cli">
+          <span class="horizontal">Soil test lab</span>
+        </div>
+        <img src="assets/motzz.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Motzz Laboratory Inc</h6>
+          <p class="card-text">Motzz Laboratory strives to be a competent partner assisting engineers and growers with their analytical needs. Agricultural testing – soil and plant testing for nutrients necessary to grow crops.</p>
+          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedSoilCard = 1" [ngClass]="{'selected': isSelectedSoilCard == 1}">
+        <div class="pointer cli">
+          <span class="horizontal">Soil test lab</span>
+        </div>
+        <img src="assets/agrolab.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Agrolab Inc</h6>
+          <p class="card-text">AgroLab Inc. was established in 2010 as a turn key agronomy lab in support of agronomist, farmers, turf specialist, manufactures and others.  AgroLab is located on Delmarva and services customers.</p>
+          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedSoilCard = 2" [ngClass]="{'selected': isSelectedSoilCard == 2}">
+        <div class="pointer cli">
+          <span class="horizontal">Soil test lab</span>
+        </div>
+        <img src="assets/brook.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Brookside Laboratories Inc</h6>
+          <p class="card-text">Brookside is the only laboratory in the world offering complete agricultural/turf, environmental, accredited (ISO 17025) geotechnical testing and soil health testing services.</p>
+          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedSoilCard = 3" [ngClass]="{'selected': isSelectedSoilCard == 3}">
+        <div class="pointer cli">
+          <span class="horizontal">Soil test lab</span>
+        </div>
+        <img src="assets/rockriver.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Rock River Laboratory Inc</h6>
+          <p class="card-text">We're a family-owned laboratory network providing production assistance to the agriculture industry through progressive techniques, research-supported analyses, and unsurpassed customer service.</p>
+          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-right">
+    <button type="button" class="btn btn-primary mt-3" (click)="redirectToApprove();">Proceed</button>
+  </div>
+</div>

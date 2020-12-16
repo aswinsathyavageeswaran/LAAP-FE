@@ -1,0 +1,170 @@
+<app-nav [title]="title"></app-nav>
+<div class="container mt-4">
+  <div class="card mt-2">
+    <div class="card-header">
+      Survey Questionnaire
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">1.	What type of business </h5>
+      <div class="row">
+        <div class="col">
+          <select class="custom-select" [(ngModel)]="businessType" (change)="onSelectType();">
+            <option value="" selected>Select the type of business</option>
+            <option value="agriculture">Agriculture</option>
+            <option value="software">Software Industry</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4" *ngIf="displaySecondQuestion">
+    <div class="card-body">
+      <h5 class="card-title">2.	Type of crop </h5>
+      <div class="row">
+        <div class="col">
+          <select class="custom-select" [(ngModel)]="cropType" (change)="onSelectCrop();">
+            <option value="" selected>Select the type of crop</option>
+            <option value="orange">Orange</option>
+            <option value="grapes">Grapes</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4" *ngIf="displaySecondQuestion && displayThirdQuestion">
+    <div class="card-body">
+      <h5 class="card-title">3.	Location</h5>
+      <div class="row">
+        <div class="col">
+          <select class="custom-select" [(ngModel)]="location" (change)="onSelectLocation();">
+            <option value="" selected>Select location</option>
+            <option value="sanfranciso">San Francisco</option>
+            <option value="california">California</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <div class="alert alert-danger text-center mt-3" role="alert" *ngIf="hasError">
+            Dear <span class="text-capitalize">{{user.name}}</span>, you cannot cultivate grapes in this location.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="displayFourthQuestion">
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">4.	Years of experience in Farming</h5>
+        <div class="row">
+          <div class="col">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="number" class="form-control exp-input mr-2" value="0">
+                <small class="text-muted">
+                  Years
+                </small>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control exp-input ml-3 mr-2" value="0">
+                <small class="text-muted">
+                  Months
+                </small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">5.	I possess the legal capacity to obtain a loan</h5>
+        <div class="row">
+          <div class="col">
+            <form class="form-inline">
+            <div class="form-check mr-4">
+              <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1" checked>
+              <label class="form-check-label" for="radio1">
+                No
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio1" id="radio2" value="option2">
+              <label class="form-check-label" for="radio2">
+                Yes
+              </label>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">6.	City</h5>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Enter City" [(ngModel)]="inputCity" (ngModelChange)="onSelectCity();"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">7.	I am unable to obtain credit elsewhere at reasonable rates and terms</h5>
+        <div class="row">
+          <div class="col">
+            <form class="form-inline">
+            <div class="form-check mr-4">
+              <input class="form-check-input" type="radio" name="radio2" id="radio1" value="option1" checked>
+              <label class="form-check-label" for="radio1">
+                No
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio2" id="radio2" value="option2">
+              <label class="form-check-label" for="radio2">
+                Yes
+              </label>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">8.	I have the training, education, or experience that enables me to effectively manage my farm</h5>
+        <div class="row">
+          <div class="col">
+            <form class="form-inline">
+            <div class="form-check mr-4">
+              <input class="form-check-input" type="radio" name="radio3" id="radio1" value="option1" checked>
+              <label class="form-check-label" for="radio1">
+                No
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio3" id="radio2" value="option2">
+              <label class="form-check-label" for="radio2">
+                Yes
+              </label>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-right">
+      <button type="button" [disabled]="!enableSubmit" class="btn btn-primary mt-3" (click)="redirectToVendors();">Submit</button>
+    </div>
+  </div>
+
+</div>

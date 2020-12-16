@@ -7,6 +7,11 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
+import { FormsModule } from '@angular/forms';
+import { SurveyComponent } from './survey/survey.component';
+import { SuggestedVendorsComponent } from './suggested-vendors/suggested-vendors.component';
+import { LoanApproveComponent } from './loan-approve/loan-approve.component';
+import { MonitoringComponent } from './monitoring/monitoring.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,16 @@ import { NavComponent } from './nav/nav.component';
     LoginComponent,
     DashboardComponent,
     RegisterComponent,
-    NavComponent
+    NavComponent,
+    SurveyComponent,
+    SuggestedVendorsComponent,
+    LoanApproveComponent,
+    MonitoringComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,9 @@
     width: 100%;
     position: relative;
     padding-bottom: 20px;
-    background-color: #f7f7f7;
+    background-image: url("assets/graphic-design-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer {
@@ -47,7 +49,53 @@
     }
 }
 
+.username {
+    text-transform: capitalize;
+}
+
+.form-inline {
+    .form-control {
+        &.exp-input {
+            width: 60px;
+        }
+    }
+}
+
 // Bootstrap override
+
+.table {
+    tbody {
+        td, th {
+            background-color: #fff;
+        }
+        tr {
+            &.selected {
+                td, th {
+                    background-color: #ffeddb;
+                }
+            }
+
+            .btn-primary {
+                background-color: #12b9df;
+                border-color: #12b9df;
+            }
+        }
+    }
+
+    &.shd {
+        box-shadow: 0 0 11px #ccc;
+    }
+}
+
+.card-img-top {
+    flex-shrink: 0;
+    width: 72px;
+    margin: 48px auto 0;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
 
 .navbar-brand {
     padding-top: 0;
@@ -61,8 +109,8 @@
 }
 
 .bg-light {
-    background: #ebebeb !important;
-    box-shadow: 0 2px 2px #9d9d9d;
+    background-color: rgba(250, 250, 250, 0.7) !important;
+    box-shadow: 0 1px 3px #7e7e7e;
 }
 
 .user-menu {
@@ -82,4 +130,108 @@
 .form-check-input {
     top: 1.7px;
     cursor: pointer;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+carousel.slide-animated {
+    slide.item {
+      animation-duration: 500ms;
+      animation-fill-mode: both;
+      &.active {
+        width: 100%;
+        animation-name: carouselSlideIn;
+      }
+      &:not(.active) {
+        display: table-cell;
+        animation-name: carouselSlideOut;
+      }
+    }
+}
+  
+@keyframes carouselSlideIn {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes carouselSlideOut {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.slider-wrap {
+    padding: 10px;
+}
+
+.carousel-control {
+    display: none;
+}
+
+.card {
+    .btn-primary {
+        background-color: #12b9df;
+        border-color: #12b9df;
+    }
+    &.shd {
+        box-shadow: 0 0 11px #ccc;
+        cursor: pointer;
+    }
+    &.suggested {
+        &.selected, &:hover {
+            background-color: #ffeddb;
+
+            .pointer:after {
+                border-right: 10px solid #ffeddb !important;
+            }
+        }
+        .card-title {
+            height: 40px;
+        }
+        p {
+            font-size: 11px;
+            height: 85px;
+        }
+    }
+    &.ribbon-card {
+        position: relative;
+
+        .horizontal {
+            width: 100%;
+            position: absolute;
+            top: 3px;
+            left: 7px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: left;
+            text-transform: uppercase;
+          }
+          .pointer {
+            width: 115px;
+            height: 25px;
+            position: absolute;
+            left: 0;
+            color: white;
+            margin-top: 10px;
+
+            &.ins {
+                background-color: #0bccbb;
+            }
+
+            &.cli {
+                background-color: #d14eaf;;
+            }
+          }
+          .pointer:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-right: 10px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 13px solid transparent;
+          }
+    }
 }

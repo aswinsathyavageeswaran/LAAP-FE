@@ -1,0 +1,49 @@
+.notify-box {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 6px #535050;
+
+    .notify-div {
+        margin-left: -11px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .notify-title {
+        background-color: #fff;
+        padding: 5px 10px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    p {
+        font-size: 16px;
+        color: #fff;
+    }
+    small {
+        color: #fff;
+    }
+
+    &.style-1 {
+        background: linear-gradient(130deg, #BF86BD, #c24cbe);
+    }
+
+    &.style-2 {
+        background: linear-gradient(130deg, #9CA3D7, #6773ce);
+    }
+
+    &.style-3 {
+        background: linear-gradient(130deg, #9281B8, #6c549f);
+    }
+
+    &.style-4 {
+        background: linear-gradient(130deg, #73C1E5, #399cca);
+    }
+
+    &.style-5 {
+        background: linear-gradient(130deg, #42bc7e, #1f8d55);
+    }
+}
