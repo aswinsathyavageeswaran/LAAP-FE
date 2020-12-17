@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -10,5 +12,11 @@ export class AppService {
         password: "password"
     };
 
-    constructor() {}
+    constructor(
+        private httpClient: HttpClient
+    ) {}
+
+    public getWeatherData(): Observable<any> {
+        return this.httpClient.get("http://dataservice.accuweather.com/forecasts/v1/daily/5day/348755?apikey=VuZRr74Nj6mYLOcYxlm74DhRSQmj8Z9a");
+    }
 }

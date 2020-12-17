@@ -13,6 +13,7 @@ import { SuggestedVendorsComponent } from './suggested-vendors/suggested-vendors
 import { LoanApproveComponent } from './loan-approve/loan-approve.component';
 import { MonitoringComponent } from './monitoring/monitoring.component';
 import { MarketTrendComponent } from './market-trend/market-trend.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MarketTrendComponent } from './market-trend/market-trend.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

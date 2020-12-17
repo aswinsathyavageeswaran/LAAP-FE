@@ -25,6 +25,29 @@
       <h5 class="mt-4">Export Trends of Grapes from United States</h5>
       <div class="graph-1 mb-4"><img src="assets/export_trends.png" width="100%"></div>
     </div>
+    <div class="col-12 mb-4 pt-4 mt-3 weather-forecast">
+      <h5 class="mb-2">Weather Forecast</h5>
+      <p>
+        {{weatherData.description}}
+      </p>
+      <table class="table shd">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Maximum Temprature</th>
+            <th scope="col">Minimum Temprature</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of weatherData.forecast">
+            <!-- <td scope="row">1</td> -->
+            <td>{{data.Date | date: 'fullDate'}}</td>
+            <td>{{data.Temperature.Maximum.Value}} {{data.Temperature.Maximum.Unit}}</td>
+            <td>{{data.Temperature.Minimum.Value}} {{data.Temperature.Minimum.Unit}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="col-12">
       <img src="assets/corp-season.png" width="100%">
     </div>

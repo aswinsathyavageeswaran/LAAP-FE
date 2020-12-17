@@ -327,6 +327,32 @@ carousel.slide-animated {
     }
 }
 
+.loan-popup {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    .popup-div {
+        width: 1000px;
+        height: 400px;
+        position: absolute;
+        background-color: #fff;
+        top: 100px;
+        left: 50%;
+        transition: bottom 500ms;
+        box-shadow: 0 0 21px #262626;
+        margin-left: -500px;
+        border-radius: 5px;
+        padding: 25px;
+
+        &.open {
+            bottom: 86px;
+        }
+
+    }
+}
+
 .card-body {
     &.ins-card {
         &:hover {

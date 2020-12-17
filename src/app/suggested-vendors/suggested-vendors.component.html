@@ -21,7 +21,7 @@
             <td>$600,000</td>
             <td>Term: Upto 40 years | Interest rate: Fixed</td>
             <td>
-              <button class="btn btn-primary btn-sm" (click)="selectedTable = 0">SELECT</button>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 0; openLoanPopup = true;">SELECT</button>
             </td>
           </tr>
           <tr [ngClass]="{'selected': selectedTable == 1}">
@@ -40,7 +40,7 @@
             </td>
             <td>Term: Upto 20 years | Interest rate: Fixed</td>
             <td>
-              <button class="btn btn-primary btn-sm" (click)="selectedTable = 1">SELECT</button>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 1; openLoanPopup = true;">SELECT</button>
             </td>
           </tr>
           <tr [ngClass]="{'selected': selectedTable == 2}">
@@ -49,7 +49,7 @@
             <td>$600,000</td>
             <td>Term : Upto 40 years | Interest rate: direct Farm ownership rate less than 2% with a floor of 2.5%</td>
             <td>
-              <button class="btn btn-primary btn-sm" (click)="selectedTable = 2">SELECT</button>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 2; openLoanPopup = true;">SELECT</button>
             </td>
           </tr>
         </tbody>
@@ -173,7 +173,7 @@
     <button type="button" class="btn btn-primary mt-3" (click)="redirectToApprove();">Proceed</button>
   </div>
 </div>
-<div class="backdrop" *ngIf="displayPopup">
+<div class="backdrop" *ngIf="displayPopup" (click)="closePopup();"> 
   <div class="popup-div">
     <h3 class="text-center">Thank you for choosing our insurance.</h3>
     <p class="text-center">After analyzing your plan, we have come up with best packages. Please select any one from the list.</p>
@@ -228,5 +228,22 @@
         <button type="button" class="btn btn-primary ml-3" (click)="savePopup()" >Submit</button>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="loan-popup backdrop" *ngIf="openLoanPopup"  (click)="openLoanPopup = false;">
+  <div class="popup-div">
+      <h3 class="text-center">Your Bank Account Details.</h3>
+      <p class="text-center">Please Verify and Confirm you bank account details.</p>
+      <div class="row">
+        <div class="col-12">
+          
+        </div>
+        <div class="col-12 text-right mt-3">
+          <hr/>
+          <button type="button" class="btn btn-secondary" (click)="saveLoanPopup()">Cancel</button>
+          <button type="button" class="btn btn-primary ml-3" (click)="saveLoanPopup()" >Confirm</button>
+        </div>
+      </div>
   </div>
 </div>

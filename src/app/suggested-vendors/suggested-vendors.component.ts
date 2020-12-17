@@ -14,6 +14,7 @@ export class SuggestedVendorsComponent implements OnInit {
   public selectedTable: number = -1;
   public displayPopup: boolean = false;
   public selectedCard: number = -1;
+  public openLoanPopup: boolean = false;
 
   constructor(
     private router: Router
@@ -54,5 +55,7 @@ export class SuggestedVendorsComponent implements OnInit {
     }, 200);
   }
 
-
+  public saveLoanPopup(): void {
+    this.openLoanPopup = false;
+  }
 }

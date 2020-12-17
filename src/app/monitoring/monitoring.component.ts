@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-monitoring',
@@ -49,8 +50,11 @@ export class MonitoringComponent implements OnInit {
     }
   ]
 
+  public weatherData: any = {};
+
   constructor(
-    private router: Router
+    private router: Router,
+    private appService: AppService
   ) { }
 
   public ngOnInit(): void {
@@ -63,6 +67,18 @@ export class MonitoringComponent implements OnInit {
         clearInterval(timer);
       }
     }, 4000);
+    this.callWeatherAPI();
+  }
+
+  public callWeatherAPI(): void {
+    this.appService.getWeatherData().subscribe(res => {
+      console.log(res);
+      this.weatherData = {
+        effectiveDate: res.Headline.EffectiveDate,
+        description: res.Headline.Text,
+        forecast: res.DailyForecasts
+      }
+    });
   }
 
   public redirectToMarketing(): void {
