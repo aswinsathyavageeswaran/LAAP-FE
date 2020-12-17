@@ -8,20 +8,22 @@
     </div>
     <div class="col-3">
       <h5>Notifications</h5>
-      <div class="notify-box mb-4 style-{{notif.style}}" *ngFor="let notif of defaultNotifications">
-        <div class="notify-div"><span class="notify-title">{{notif.type}}</span></div>
-        <p class="mb-0">{{notif.desc}}</p>
-        <div class="text-right">
-          <small>{{notif.date | date: 'medium'}}</small>
+      <div>
+        <div class="notify-box mb-4 style-{{notif.style}}" *ngFor="let notif of defaultNotifications">
+          <div class="notify-div"><span class="notify-title">{{notif.type}}</span></div>
+          <p class="mb-0">{{notif.desc}}</p>
+          <div class="text-right">
+            <small>{{notif.date | date: 'medium'}}</small>
+          </div>
+          <img src="assets/new_star2.png" class="new-img" *ngIf="notif.isNew"/>
         </div>
-        <img src="assets/new_star2.png" class="new-img" *ngIf="notif.isNew"/>
       </div>
     </div>
     <div class="col-9">
       <h5>Grape Production of United States</h5>
       <div class="graph-1"><img src="assets/grape-production.png" width="100%"></div>
       <h5 class="mt-4">Export Trends of Grapes from United States</h5>
-      <div class="graph-1"><img src="assets/export_trends.png" width="100%"></div>
+      <div class="graph-1 mb-4"><img src="assets/export_trends.png" width="100%"></div>
     </div>
     <div class="col-12">
       <img src="assets/corp-season.png" width="100%">

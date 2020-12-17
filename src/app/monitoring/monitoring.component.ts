@@ -35,14 +35,14 @@ export class MonitoringComponent implements OnInit {
     },
     {
       type: "RECOMMENDED VARIETIES",
-      desc: "Seedless varieties will produce smaller grapes. ‘Edelweiss’: Hardy in zones 4–7 (–20°F), early white variety. Table and wine.",
+      desc: "Seedless varieties will produce smaller grapes.",
       date: new Date(),
       isNew: true,
       style: 4
     },
     {
       type: "Pruning Grapes",
-      desc: "Pruning is very important. Grapes produce fruit on shoots growing off of one-year-old canes. If you have too many old canes (from no pruning), then you’ll get fewer grapes. If you prune back your vines completely each year, then you get lots of new growth, but again, few grapes.",
+      desc: "Pruning is very important. Grapes produce fruit on shoots growing off of one-year-old canes.",
       date: new Date(),
       isNew: true,
       style: 5
