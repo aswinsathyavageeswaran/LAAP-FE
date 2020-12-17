@@ -1,0 +1,26 @@
+.market-graph-1 {
+    box-shadow: 0 5px 5px #a09d9d;
+    
+    h2, h5 {
+        font-weight: bold;
+    }
+
+    small {
+        color: #999;
+        font-weight: 600;
+    }
+
+    .txt {
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .green-txt {
+        color: #06c606;
+    }
+
+    .red-txt {
+        color: red;
+    }
+}

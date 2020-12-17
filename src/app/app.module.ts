@@ -12,6 +12,7 @@ import { SurveyComponent } from './survey/survey.component';
 import { SuggestedVendorsComponent } from './suggested-vendors/suggested-vendors.component';
 import { LoanApproveComponent } from './loan-approve/loan-approve.component';
 import { MonitoringComponent } from './monitoring/monitoring.component';
+import { MarketTrendComponent } from './market-trend/market-trend.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MonitoringComponent } from './monitoring/monitoring.component';
     SurveyComponent,
     SuggestedVendorsComponent,
     LoanApproveComponent,
-    MonitoringComponent
+    MonitoringComponent,
+    MarketTrendComponent
   ],
   imports: [
     BrowserModule,

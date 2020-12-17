@@ -56,58 +56,58 @@
       </table>
     </div>
   </div>
-  <h5 class="mt-4">Insurance vendors</h5>
+  <h5 class="mt-4">Suggested Vendors</h5>
   <hr/>
   <div class="row">
     <div class="col-3">
-      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 0" [ngClass]="{'selected': isSelectedInsuranceCard == 0}">
+      <div class="card shd ribbon-card text-center suggested" [ngClass]="{'selected': selectedCard != -1}">
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
         <img src="assets/ace.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h6 class="card-title">ACE American Insurance Company</h6>
+          <h6 class="card-title"><a target="_blank" href="https://www.axiagroup.net/insurance-company/ace-ina-insurance" target="_blank" >ACE American Insurance Company</a></h6>
           <p class="card-text">ACE American Insurance Company operates as an insurance company. The Company offers property and casualty insurance services. ACE American Insurance serves customers worldwide.</p>
-          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+          <div><a (click)="selectButton($event)" class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
     </div>
     <div class="col-3">
-      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 1" [ngClass]="{'selected': isSelectedInsuranceCard == 1}">
+      <div class="card shd ribbon-card text-center suggested">
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
         <img src="assets/agri.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h6 class="card-title">American Agri-Business Insurance Company</h6>
+          <h6 class="card-title"><a href="https://www.aaic.com" target="_blank">American Agri-Business Insurance Company</a></h6>
           <p class="card-text">American Agri Business Insurance Co operates as an insurance company. The Company offers crop insurance services. American Agri Business Insurance serves customers in the United States.</p>
-          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
     </div>
     <div class="col-3">
-      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 2" [ngClass]="{'selected': isSelectedInsuranceCard == 2}">
+      <div class="card shd ribbon-card text-center suggested">
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
         <img src="assets/hudson.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h6 class="card-title">Hudson Insurance Company</h6>
+          <h6 class="card-title"><a href = "https://hudsoninsgroup.com/offices/new-york/" target="_blank">Hudson Insurance Company</a></h6>
           <p class="card-text">Hudson is a market-leading specialty insurer that offers a wide range of property and casualty insurance products to corporations, professional firms , wholesalers and program administrators.</p>
-          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
     </div>
     <div class="col-3">
-      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 3" [ngClass]="{'selected': isSelectedInsuranceCard == 3}">
+      <div class="card shd ribbon-card text-center suggested">
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
         <img src="assets/crs.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h6 class="card-title">Crop Risk Services, Inc</h6>
+          <h6 class="card-title"><a href = "https://www.cropriskservices.com/" target="_blank" >Crop Risk Services, Inc</a></h6>
           <p class="card-text">Crop Risk Services is a leading primary crop insurance managing general agent, serving North American farmers with a affordable crop income protection and continue to meet, this challenge.</p>
-          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
     </div>
@@ -120,9 +120,9 @@
         </div>
         <img src="assets/motzz.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h6 class="card-title">Motzz Laboratory Inc</h6>
+          <h6 class="card-title"><a href="http://www.motzzlaboratory.com/" target="_blank">Motzz Laboratory Inc</a></h6>
           <p class="card-text">Motzz Laboratory strives to be a competent partner assisting engineers and growers with their analytical needs. Agricultural testing – soil and plant testing for nutrients necessary to grow crops.</p>
-          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
     </div>
@@ -134,9 +134,9 @@
         </div>
         <img src="assets/agrolab.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h6 class="card-title">Agrolab Inc</h6>
+          <h6 class="card-title"><a href = "https://www.agrolab.us/" target="_blank">Agrolab Inc</a></h6>
           <p class="card-text">AgroLab Inc. was established in 2010 as a turn key agronomy lab in support of agronomist, farmers, turf specialist, manufactures and others.  AgroLab is located on Delmarva and services customers.</p>
-          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
     </div>
@@ -148,9 +148,9 @@
         </div>
         <img src="assets/brook.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h6 class="card-title">Brookside Laboratories Inc</h6>
+          <h6 class="card-title"><a href = "https://www.blinc.com/services/soil-analysis" target="_blank">Brookside Laboratories Inc</a></h6>
           <p class="card-text">Brookside is the only laboratory in the world offering complete agricultural/turf, environmental, accredited (ISO 17025) geotechnical testing and soil health testing services.</p>
-          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
     </div>
@@ -162,14 +162,71 @@
         </div>
         <img src="assets/rockriver.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h6 class="card-title">Rock River Laboratory Inc</h6>
+          <h6 class="card-title"><a href="https://rockriverlab.com/" target="_blank">Rock River Laboratory Inc</a></h6>
           <p class="card-text">We're a family-owned laboratory network providing production assistance to the agriculture industry through progressive techniques, research-supported analyses, and unsurpassed customer service.</p>
-          <div><a href="http://www.google.com" (click)="selectButton($event)" target="_blank" class="btn btn-primary btn-sm">Go to website</a></div>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
     </div>
   </div>
   <div class="text-right">
     <button type="button" class="btn btn-primary mt-3" (click)="redirectToApprove();">Proceed</button>
+  </div>
+</div>
+<div class="backdrop" *ngIf="displayPopup">
+  <div class="popup-div">
+    <h3 class="text-center">Thank you for choosing our insurance.</h3>
+    <p class="text-center">After analyzing your plan, we have come up with best packages. Please select any one from the list.</p>
+    <div class="row">
+      <div class="col-3">
+        <div class="card popup popup-style-1" (click)="selectedCard = 0" [ngClass]="{'selected': selectedCard == 0}">
+          <div class="card-body text-center ins-card">
+            <div><i class="fa fa-check-circle"></i></div>
+            <h5 class="card-title">Area Yield Protection</h5>
+            <small>AYP - Plan 04</small>
+            <p class="card-text">AYP coverage is based on the experience of the county rather than individual farms. Maintaining the insured’s actual production history is now mandatory and may be used by RMA as a data source to establish and maintain the area programs. AYP indemnifies the insured in the event the final county yield falls below the insured’s trigger yield. The Federal Crop Insurance Corporation (FCIC) will issue the final county yield in the calendar year following the crop year insured. Since this plan is based on county yields and not individual yields, the insured may have a low yield on their farm and not receive payment under AYP.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card popup popup-style-2" (click)="selectedCard = 1" [ngClass]="{'selected': selectedCard == 1}">
+          <div class="card-body text-center ins-card">
+            <div><i class="fa fa-check-circle"></i></div>
+            <h5 class="card-title">Area Revenue Protection</h5>
+            <small>ARP - Plan 05</small>
+            <p class="card-text">Like the other area plans, ARP is based on the experience of the county rather than individual farms. Coverage is provided against loss of revenue due to a county level production loss, a price decline, or a combination of both. Upside harvest price protection is included which increases the policy protection at the end of the insurance period if the harvest price is greater than the projected price and if there is a production loss. ARP will pay a loss when the final county revenue is less than the trigger revenue which is calculated using the higher of the projected price or harvest price.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card popup popup-style-3" (click)="selectedCard = 2" [ngClass]="{'selected': selectedCard == 2}">
+          <div class="card-body text-center ins-card">
+            <div><i class="fa fa-check-circle"></i></div>
+            <h5 class="card-title">w/Harvest Price Exclusion</h5>
+            <small>ARPHPE  Plan 06</small>
+            <p class="card-text">Like AYP, ARP-HPE is based on the experience of the county rather than individual farms. Maintaining the insured’s actual production history is now mandatory and may be used by RMA as a data source to establish and maintain the area programs. An ARPHPE policy provides protection against loss of revenue due to a county level production loss, price decline, or a combination of both. This plan only uses the projected price and does not provide upside harvest price protection. An indemnity is due under ARP-HPE when the final county revenues published by FCIC are less than the trigger revenue.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card popup popup-style-4" (click)="selectedCard = 3" [ngClass]="{'selected': selectedCard == 3}">
+          <div class="card-body text-center ins-card">
+            <div><i class="fa fa-check-circle"></i></div>
+            <h5 class="card-title">Actual Production History</h5>
+            <small>APH – Plan 90</small>
+            <p class="card-text">APH is the oldest insurance product listed on this comparison. The APH plan of insurance provides protection against a loss in yield due to nearly all natural disasters. For most crops, that includes drought, excess moisture, cold and frost, wind, flood and unavoidable damage from insects and disease. Like YP, the APH plan of insurance guarantees a yield based on the individual producer’s actual production history. Unlike YP, the available price elections are established by the Risk Management Agency.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 text-right mt-3">
+        <hr/>
+        <button type="button" class="btn btn-secondary" (click)="closePopup()">Cancel</button>
+        <button type="button" class="btn btn-primary ml-3" (click)="savePopup()" >Submit</button>
+      </div>
+    </div>
   </div>
 </div>
