@@ -1,39 +1,53 @@
 <app-nav [title]="title"></app-nav>
 <div class="container mt-4">
-  <h5 class="mt-4">Loans</h5>
-  <hr/>
   <div class="row">
     <div class="col">
+      <h5 class="mt-4">Loans</h5>
+      <hr/>
       <table class="table shd">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">#</th>
+            <!-- <th scope="col">#</th> -->
             <th scope="col">Type</th>
-            <th scope="col">Interest Rate</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Maximum Loan Amount</th>
+            <th scope="col">Rate and Terms</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
           <tr [ngClass]="{'selected': selectedTable == 0}">
-            <th scope="row">1</th>
+            <!-- <td scope="row">1</td> -->
             <td>Direct Farm Ownership</td>
-            <td>2.500%</td>
+            <td>$600,000</td>
+            <td>Term: Upto 40 years | Interest rate: Fixed</td>
             <td>
               <button class="btn btn-primary btn-sm" (click)="selectedTable = 0">SELECT</button>
             </td>
           </tr>
           <tr [ngClass]="{'selected': selectedTable == 1}">
-            <th scope="row">2</th>
+            <!-- <td scope="row">2</td> -->
             <td>Direct Down Payment</td>
-            <td>Thornton</td>
+            <td>
+              45% of the lesser of the following
+              <ul>
+                <li>
+                  the farm or ranch purchased price
+                </li>
+                <li>
+                  the appraised value
+                </li>
+              </ul>
+            </td>
+            <td>Term: Upto 20 years | Interest rate: Fixed</td>
             <td>
               <button class="btn btn-primary btn-sm" (click)="selectedTable = 1">SELECT</button>
             </td>
           </tr>
           <tr [ngClass]="{'selected': selectedTable == 2}">
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
+            <!-- <td scope="row">3</td> -->
+            <td>Direct Farm Ownership Participation</td>
+            <td>$600,000</td>
+            <td>Term : Upto 40 years | Interest rate: direct Farm ownership rate less than 2% with a floor of 2.5%</td>
             <td>
               <button class="btn btn-primary btn-sm" (click)="selectedTable = 2">SELECT</button>
             </td>

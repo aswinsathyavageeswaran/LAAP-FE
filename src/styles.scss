@@ -87,6 +87,14 @@
     }
 }
 
+.survey {
+    &.card {
+        // background: #6aa6b3;
+        background: #2789ad;
+        color: #fff;
+    }
+}
+
 .card-img-top {
     flex-shrink: 0;
     width: 72px;

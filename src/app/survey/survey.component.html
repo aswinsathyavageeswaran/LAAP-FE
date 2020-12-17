@@ -1,6 +1,6 @@
 <app-nav [title]="title"></app-nav>
 <div class="container mt-4">
-  <div class="card mt-2">
+  <div class="card mt-2 survey">
     <div class="card-header">
       Survey Questionnaire
     </div>
@@ -12,13 +12,14 @@
             <option value="" selected>Select the type of business</option>
             <option value="agriculture">Agriculture</option>
             <option value="software">Software Industry</option>
+            <option value="software">Partnership</option>
           </select>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="card mt-4" *ngIf="displaySecondQuestion">
+  <div class="card mt-4 survey" *ngIf="displaySecondQuestion">
     <div class="card-body">
       <h5 class="card-title">2.	Type of crop </h5>
       <div class="row">
@@ -33,7 +34,7 @@
     </div>
   </div>
 
-  <div class="card mt-4" *ngIf="displaySecondQuestion && displayThirdQuestion">
+  <div class="card mt-4 survey" *ngIf="displaySecondQuestion && displayThirdQuestion">
     <div class="card-body">
       <h5 class="card-title">3.	Location</h5>
       <div class="row">
@@ -46,7 +47,7 @@
         </div>
         <div class="col-12">
           <div class="alert alert-danger text-center mt-3" role="alert" *ngIf="hasError">
-            Dear <span class="text-capitalize">{{user.name}}</span>, you cannot cultivate grapes in this location.
+            Dear <span class="text-capitalize">{{user.name}}</span>, It's not advisable to cultivate grapes in this location.
           </div>
         </div>
       </div>
@@ -54,7 +55,7 @@
   </div>
 
   <div *ngIf="displayFourthQuestion">
-    <div class="card mt-4">
+    <div class="card mt-4 survey">
       <div class="card-body">
         <h5 class="card-title">4.	Years of experience in Farming</h5>
         <div class="row">
@@ -78,7 +79,7 @@
       </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card mt-4 survey">
       <div class="card-body">
         <h5 class="card-title">5.	I possess the legal capacity to obtain a loan</h5>
         <div class="row">
@@ -102,7 +103,7 @@
       </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card mt-4 survey">
       <div class="card-body">
         <h5 class="card-title">6.	City</h5>
         <div class="row">
@@ -115,7 +116,7 @@
       </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card mt-4 survey">
       <div class="card-body">
         <h5 class="card-title">7.	I am unable to obtain credit elsewhere at reasonable rates and terms</h5>
         <div class="row">
@@ -139,7 +140,7 @@
       </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card mt-4 survey">
       <div class="card-body">
         <h5 class="card-title">8.	I have the training, education, or experience that enables me to effectively manage my farm</h5>
         <div class="row">
