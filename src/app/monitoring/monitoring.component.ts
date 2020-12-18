@@ -58,6 +58,11 @@ export class MonitoringComponent implements OnInit {
   ) { }
 
   public ngOnInit(): void {
+    this.appService.isLoading = true;
+    var root = this;
+    setTimeout(() => {
+      root.appService.isLoading = false;
+    }, 2000);
     let index = 0;
     
     const timer = setInterval(() => {

@@ -21,6 +21,7 @@ export class SurveyComponent implements OnInit {
   public user: any;
   public inputCity: string = "";
   public title="Survey";
+  public accountNumber: number;
 
   constructor(
     private appService: AppService,
@@ -44,17 +45,24 @@ export class SurveyComponent implements OnInit {
   }
 
   public onSelectLocation(): void {
-    if(this.location != "california" && this.cropType == "grapes") {
-      this.hasError = true;
-      this.enableSubmit = false;
-      this.displayFourthQuestion = false;
-      return;
-    }
+    this.appService.isLoading = true;
+    var root = this;
+    setTimeout(() => {
+      root.appService.isLoading = false;
+      if(root.location != "california" && root.cropType == "grapes") {
+        root.hasError = true;
+        root.enableSubmit = false;
+        root.displayFourthQuestion = false;
+        return;
+      }
+  
+      if(root.location == "california") {
+        root.hasError = false;
+        root.displayFourthQuestion = true;
+      }
+    }, 2000);
 
-    if(this.location == "california") {
-      this.hasError = false;
-      this.displayFourthQuestion = true;
-    }
+    
   }
 
   public onSelectCity(): void {
@@ -62,7 +70,12 @@ export class SurveyComponent implements OnInit {
   }
 
   public redirectToVendors(): void {
-    this.router.navigateByUrl("/suggested-vendors");
+    var root = this;
+    this.appService.isLoading = true;
+    setTimeout(() => {
+      root.appService.isLoading = false;
+      root.router.navigateByUrl("/suggested-vendors");
+    }, 2000);
   }
 
   private reset(): void {

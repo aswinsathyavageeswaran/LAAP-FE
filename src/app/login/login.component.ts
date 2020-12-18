@@ -28,15 +28,20 @@ export class LoginComponent implements OnInit {
   }
 
   public signIn(): void {
-    if (this.username == this.user.name && this.password == this.user.password) {
-      this.router.navigateByUrl("/dashboard");
-    }
-    else if (this.username == this.appService.bankUser.name && this.password == this.appService.bankUser.password) {
-      this.router.navigateByUrl("/bank");
-    }
-    else {
-      this.hasError = true;
-    }
+    this.appService.isLoading = true;
+    var root = this;
+    setTimeout(() => {
+      if (root.username == root.user.name && root.password == root.user.password) {
+        root.router.navigateByUrl("/dashboard");
+      }
+      else if (root.username == root.appService.bankUser.name && root.password == root.appService.bankUser.password) {
+        root.router.navigateByUrl("/bank");
+      }
+      else {
+        root.hasError = true;
+      }
+      root.appService.isLoading = false;
+    }, 2000);
   }
 
 }

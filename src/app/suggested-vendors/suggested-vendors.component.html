@@ -1,5 +1,5 @@
 <app-nav [title]="title"></app-nav>
-<div class="container mt-4">
+<div class="container mt-4" *ngIf="!appService.isLoading">
   <div class="row">
     <div class="col">
       <h5 class="mt-4">Loans</h5>
@@ -275,6 +275,4 @@
   </div>
 </div>
 
-<div class="loader" *ngIf="isLoading">
-  <img src="assets/loader2.gif" width="100"/>
-</div>
+<app-loader></app-loader>

@@ -351,6 +351,24 @@ carousel.slide-animated {
         }
 
     }
+
+    .vendor-popup {
+        width: 510px;
+        left: 63%;
+        height: 475px;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
 
 .card-body {

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!appService.isLoading">
   <div class="row mt-5">
     <div class="col-12">
       <div class="alert alert-danger text-center" role="alert" *ngIf="hasError">
@@ -31,3 +31,5 @@
     <div class="col-sm"></div>
   </div>
 </div>
+
+<app-loader></app-loader>

@@ -1,5 +1,5 @@
 <app-nav title="Marketing Trends"></app-nav>
-<div class="container pt-4">
+<div class="container pt-4" *ngIf="!appService.isLoading">
   <div class="row">
     <div class="col-12">
       <h5>Overview of Grape Market in United States</h5>
@@ -120,8 +120,11 @@
             <a href="https://www.tridge.com/offers/CAN-9E6BE879" target="_blank">Red Table Grape</a>
           </h6>
           <p class="m-0">Flame</p>
-          <small class="price-txt">USD <strong>0.92 / LBS</strong></small>
+          <small class="price-txt">USD <strong>1.25 / KG</strong></small>
           <p class="card-txt-1">EXW, Nogales, AZ and Los Angeles, CA<br/> <span>All prices valid until Dec 23, 2020</span></p>
+          <div>
+            <button type="button" class="btn btn-primary mt-3" (click)="selectedIndex = 0; openVendorPopup = true; totalCost=0; quantity=0;">Sign the Deal</button>
+          </div>
         </div>
       </div>
     </div>
@@ -136,6 +139,9 @@
           <p class="m-0">Whole / Fresh</p>
           <small class="price-txt">EUR <strong>1.8 / KG</strong></small>
           <p class="card-txt-1">EXW, Gioia, Tauro<br/> <span>All prices valid until Dec 22, 2020</span></p>
+          <div>
+            <button type="button" class="btn btn-primary mt-3" (click)="selectedIndex = 1; openVendorPopup = true; totalCost=0; quantity=0;">Sign the Deal</button>
+          </div>
         </div>
       </div>
     </div>
@@ -150,6 +156,9 @@
           <p class="m-0">Thompson  / Fresh</p>
           <small class="price-txt">USD <strong>1.15 / KG</strong></small>
           <p class="card-txt-1">FOB, JNPT Port, Mumbai<br/> <span>All prices valid until Dec 22, 2020</span></p>
+          <div>
+            <button type="button" class="btn btn-primary mt-3" (click)="selectedIndex = 2; openVendorPopup = true; totalCost=0; quantity=0;">Sign the Deal</button>
+          </div>
         </div>
       </div>
     </div>
@@ -164,14 +173,136 @@
           <p class="m-0">Thompson  / Chunks</p>
           <small class="price-txt">USD <strong>1.00 / KG</strong></small>
           <p class="card-txt-1">EXW, Mersin Port<br/> <span>All prices valid until Dec 21, 2020</span></p>
+          <div>
+            <button type="button" class="btn btn-primary mt-3" (click)="selectedIndex = 3; openVendorPopup = true; totalCost=0; quantity=0;">Sign the Deal</button>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="col-12">
+    <div class="col-12 mt-4">
       <h5>Grape Domestic Price in USA</h5>
-      <div class="graph-1"><img src="assets/graph.png" width="100%"></div>
+      <div class="graph-1" *ngIf="!appService.isLoading"><img src="assets/graph.png" width="100%"></div>
     </div>
-
   </div>
 </div>
+
+<div class="loan-popup backdrop" *ngIf="openVendorPopup">
+  <div class="popup-div vendor-popup" *ngIf="selectedIndex == 0">
+      <h3 class="text-center">Red Table Grape</h3>
+      <p class="text-center">EXW, Nogales, AZ and Los Angeles, CA</p>
+      <p class="text-center">
+        <small class="price-txt">USD <strong>1.25 / KG</strong></small>
+      </p>
+      <div class="row">
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label"><strong>Contact Number</strong></label>
+            <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="Contact Number">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label"><strong>Quantity</strong></label>
+            <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="Item Quantity" [(ngModel)]="quantity" (ngModelChange)="qtyInputChanged(1.25);">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label mr-3"><strong>Total Cost : </strong></label>
+            <span>USD {{totalCost}}</span>
+          </div>
+        </div>
+        <div class="col-12 text-right mt-3">
+          <hr/>
+          <button type="button" class="btn btn-secondary" (click)="openVendorPopup = false;">Cancel</button>
+          <button type="button" class="btn btn-primary ml-3" (click)="confirmDeal();" >Confirm</button>
+        </div>
+      </div>
+  </div>
+
+  <div class="popup-div vendor-popup" *ngIf="selectedIndex == 1">
+    <h3 class="text-center">Table Grapes from Italy</h3>
+    <p class="text-center">EXW, Gioia, Tauro</p>
+    <p class="text-center">
+      <small class="price-txt">EUR <strong>1.8 / KG</strong></small>
+    </p>
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-3">
+          <label for="exampleFormControlInput3" class="form-label"><strong>Contact Number</strong></label>
+          <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="Contact Number">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput3" class="form-label"><strong>Quantity</strong></label>
+          <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="Item Quantity" [(ngModel)]="quantity" (ngModelChange)="qtyInputChanged(1.8);">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput3" class="form-label mr-3"><strong>Total Cost : </strong></label>
+          <span>EUR {{totalCost}}</span>
+        </div>
+      </div>
+      <div class="col-12 text-right mt-3">
+        <hr/>
+        <button type="button" class="btn btn-secondary" (click)="openVendorPopup = false;">Cancel</button>
+        <button type="button" class="btn btn-primary ml-3" (click)="confirmDeal();" >Confirm</button>
+      </div>
+    </div>
+</div>
+
+<div class="popup-div vendor-popup" *ngIf="selectedIndex == 2"> 
+  <h3 class="text-center">Fresh Seedless Grapes of Indian Origin</h3>
+  <p class="text-center">FOB, JNPT Port, Mumbai</p>
+  <p class="text-center">
+    <small class="price-txt">USD <strong>1.15 / KG</strong></small>
+  </p>
+  <div class="row">
+    <div class="col-12">
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label"><strong>Contact Number</strong></label>
+        <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="Contact Number">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label"><strong>Quantity</strong></label>
+        <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="Item Quantity" [(ngModel)]="quantity" (ngModelChange)="qtyInputChanged(1.15);">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label mr-3"><strong>Total Cost : </strong></label>
+        <span>USD {{totalCost}}</span>
+      </div>
+    </div>
+    <div class="col-12 text-right mt-3">
+      <hr/>
+      <button type="button" class="btn btn-secondary" (click)="openVendorPopup = false;">Cancel</button>
+      <button type="button" class="btn btn-primary ml-3" (click)="confirmDeal();" >Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup-div vendor-popup"*ngIf="selectedIndex == 3">
+  <h3 class="text-center">Sultani Grapes from Turkey</h3>
+  <p class="text-center">EXW, Mersin Port</p>
+  <p class="text-center">
+    <small class="price-txt">USD <strong>1.00 / KG</strong></small>
+  </p>
+  <div class="row">
+    <div class="col-12">
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label"><strong>Contact Number</strong></label>
+        <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="Contact Number">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label"><strong>Quantity</strong></label>
+        <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="Item Quantity" [(ngModel)]="quantity" (ngModelChange)="qtyInputChanged(1);">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label mr-3"><strong>Total Cost : </strong></label>
+        <span>USD {{totalCost}}</span>
+      </div>
+    </div>
+    <div class="col-12 text-right mt-3">
+      <hr/>
+      <button type="button" class="btn btn-secondary" (click)="openVendorPopup = false;">Cancel</button>
+      <button type="button" class="btn btn-primary ml-3" (click)="confirmDeal();" >Confirm</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<app-loader></app-loader>

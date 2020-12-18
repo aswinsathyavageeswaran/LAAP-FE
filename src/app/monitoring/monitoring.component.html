@@ -1,5 +1,5 @@
 <app-nav title="Monitoring"></app-nav>
-<div class="container pt-4">
+<div class="container pt-4" *ngIf="!appService.isLoading">
   <div class="row">
     <div class="col-12">
       <div class="text-right">
@@ -53,3 +53,4 @@
     </div>
   </div>
 </div>
+<app-loader></app-loader>
