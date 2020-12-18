@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-suggested-vendors',
@@ -15,9 +16,12 @@ export class SuggestedVendorsComponent implements OnInit {
   public displayPopup: boolean = false;
   public selectedCard: number = -1;
   public openLoanPopup: boolean = false;
+  public accountDetails: any;
+  public isLoading: boolean = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private appService: AppService
   ) { }
 
   ngOnInit() {
@@ -57,5 +61,14 @@ export class SuggestedVendorsComponent implements OnInit {
 
   public saveLoanPopup(): void {
     this.openLoanPopup = false;
+  }
+
+  public getAccountDetails(): void {
+    this.isLoading = true;
+    this.appService.getAccountDetails().subscribe(res => {
+      this.accountDetails = res;
+      this.openLoanPopup = true;
+      this.isLoading = false;
+    })
   }
 }

@@ -335,7 +335,7 @@ carousel.slide-animated {
     left: 0;
     .popup-div {
         width: 1000px;
-        height: 400px;
+        height: 440px;
         position: absolute;
         background-color: #fff;
         top: 100px;
@@ -417,4 +417,15 @@ carousel.slide-animated {
             color: #a77e17;
         }
     }
+}
+
+
+.loader {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 250px;
 }

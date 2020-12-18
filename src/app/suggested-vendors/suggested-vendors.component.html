@@ -21,7 +21,7 @@
             <td>$600,000</td>
             <td>Term: Upto 40 years | Interest rate: Fixed</td>
             <td>
-              <button class="btn btn-primary btn-sm" (click)="selectedTable = 0; openLoanPopup = true;">SELECT</button>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 0; getAccountDetails();">SELECT</button>
             </td>
           </tr>
           <tr [ngClass]="{'selected': selectedTable == 1}">
@@ -40,7 +40,7 @@
             </td>
             <td>Term: Upto 20 years | Interest rate: Fixed</td>
             <td>
-              <button class="btn btn-primary btn-sm" (click)="selectedTable = 1; openLoanPopup = true;">SELECT</button>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 1; getAccountDetails();">SELECT</button>
             </td>
           </tr>
           <tr [ngClass]="{'selected': selectedTable == 2}">
@@ -49,7 +49,7 @@
             <td>$600,000</td>
             <td>Term : Upto 40 years | Interest rate: direct Farm ownership rate less than 2% with a floor of 2.5%</td>
             <td>
-              <button class="btn btn-primary btn-sm" (click)="selectedTable = 2; openLoanPopup = true;">SELECT</button>
+              <button class="btn btn-primary btn-sm" (click)="selectedTable = 2; getAccountDetails();">SELECT</button>
             </td>
           </tr>
         </tbody>
@@ -233,11 +233,38 @@
 
 <div class="loan-popup backdrop" *ngIf="openLoanPopup"  (click)="openLoanPopup = false;">
   <div class="popup-div">
-      <h3 class="text-center">Your Bank Account Details.</h3>
+      <h3 class="text-center">Bank Account Details.</h3>
       <p class="text-center">Please Verify and Confirm you bank account details.</p>
       <div class="row">
         <div class="col-12">
-          
+          <div>
+            <label><strong>Account ID : </strong></label>
+            <span>{{accountDetails.AccountDetails.AccountId}}</span>
+          </div>
+          <div>
+            <label><strong>Account Name : </strong></label>
+            <span>{{accountDetails.AccountDetails.AccountName}}</span>
+          </div>
+          <div>
+            <label><strong>Currency : </strong></label>
+            <span>{{accountDetails.AccountDetails.Currency}}</span>
+          </div>
+          <div>
+            <label><strong>Customer Type : </strong></label>
+            <span>{{accountDetails.AccountDetails.CustomerType}}</span>
+          </div>
+          <div>
+            <label><strong>Account Type : </strong></label>
+            <span>{{accountDetails.AccountDetails.AccountType}}</span>
+          </div>
+          <div>
+            <label><strong>Account Status : </strong></label>
+            <span>{{accountDetails.AccountDetails.AccountStatus}}</span>
+          </div>
+          <div>
+            <label><strong>Account Ownership : </strong></label>
+            <span>{{accountDetails.AccountDetails.AccountOwnership}}</span>
+          </div>
         </div>
         <div class="col-12 text-right mt-3">
           <hr/>
@@ -246,4 +273,8 @@
         </div>
       </div>
   </div>
+</div>
+
+<div class="loader" *ngIf="isLoading">
+  <img src="assets/loader2.gif" width="100"/>
 </div>
