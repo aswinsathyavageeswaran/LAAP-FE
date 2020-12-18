@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
 @Component({
@@ -12,9 +13,11 @@ export class MarketTrendComponent implements OnInit {
   public totalCost: number = 0;
   public quantity: number = 0;
   public selectedIndex: number = 0;
+  public showLoanDetails: boolean = false;
 
   constructor(
-    public appService: AppService
+    public appService: AppService,
+    private router: Router
   ) { }
 
   public ngOnInit(): void {
@@ -22,12 +25,15 @@ export class MarketTrendComponent implements OnInit {
     var root = this;
 
     setTimeout(() => {
+      root.showLoanDetails = true;
       root.appService.isLoading = false;
     }, 2000);
   }
 
   public confirmDeal(): void {
     this.openVendorPopup = false;
+    this.appService.cycleNumber = this.appService.cycleNumber + 1;
+    this.router.navigateByUrl("/monitoring");
   }
 
   public qtyInputChanged(pricePerKg: number): void {

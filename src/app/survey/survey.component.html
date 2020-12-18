@@ -38,7 +38,7 @@
       <h5 class="card-title">2.	Type of Business </h5>
       <div class="row">
         <div class="col">
-          <select class="custom-select" [(ngModel)]="cropType" (change)="onSelectCrop();">
+          <select class="custom-select" [(ngModel)]="softwareType" (change)="onSelectCrop();">
             <option value="" selected>Select the type of business</option>
             <option value="proprietorship">Proprietorship</option>
             <option value="partnership">Partnership</option>
@@ -136,23 +136,40 @@
 
     <div class="card mt-4 survey">
       <div class="card-body">
-        <h5 class="card-title">7.	I am unable to obtain credit elsewhere at reasonable rates and terms</h5>
+        <h5 class="card-title">7.	Business Case</h5>
         <div class="row">
-          <div class="col">
-            <form class="form-inline">
-            <div class="form-check mr-4">
-              <input class="form-check-input" type="radio" name="radio2" id="radio1" value="option1" checked>
-              <label class="form-check-label" for="radio1">
-                No
-              </label>
+          <div class="col-4">
+            <span class="business-case-label">Total Investment</span>
+            <div class="form-group mt-2">
+              <input type="text" class="form-control" placeholder="Enter Total Investment" [(ngModel)]="totalInvestment"/>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="radio2" id="radio2" value="option2">
-              <label class="form-check-label" for="radio2">
-                Yes
-              </label>
+          </div>
+          <div class="col-4">
+            <span class="business-case-label">Production Expense</span>
+            <div class="form-group mt-2">
+              <input type="text" class="form-control" placeholder="Production Expense" [(ngModel)]="prodExpense"/>
             </div>
-            </form>
+          </div>
+          <div class="col-4">
+            <span class="business-case-label">Trading Expense</span>
+            <div class="form-group mt-2">
+              <input type="text" class="form-control" placeholder="Trading Expense" [(ngModel)]="tradingExpense"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-4">
+            <span class="business-case-label">Harvest cycle</span>
+            <div class="form-group mt-2">
+              <input type="text" class="form-control" placeholder="Enter Harvesting cycle" [(ngModel)]="harvestCycle"/>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="business-case-label">Expected returns</span>
+            <div class="form-group mt-2">
+              <input type="text" class="form-control" placeholder="Expected return on each harvesting cycle" [(ngModel)]="returns"/>
+            </div>
           </div>
         </div>
       </div>

@@ -64,11 +64,11 @@ export class SuggestedVendorsComponent implements OnInit {
   }
 
   public getAccountDetails(): void {
-    this.appService.isLoading = true;
-    this.appService.getAccountDetails().subscribe(res => {
-      this.accountDetails = res;
-      this.openLoanPopup = true;
-      this.appService.isLoading = false;
-    })
+    // this.appService.isLoading = true;
+    // this.appService.getAccountDetails().subscribe(res => {
+    //   this.accountDetails = res;
+    //   this.openLoanPopup = true;
+    //   this.appService.isLoading = false;
+    // })
   }
 }

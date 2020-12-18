@@ -21,7 +21,13 @@ export class SurveyComponent implements OnInit {
   public user: any;
   public inputCity: string = "";
   public title="Survey";
-  public accountNumber: number;
+  public totalInvestment: string = "";
+  public prodExpense: string = "";
+  public tradingExpense: string = "";
+  public harvestCycle: string = "";
+  public return: string = "";
+  public softwareType: string = "";
+
 
   constructor(
     private appService: AppService,

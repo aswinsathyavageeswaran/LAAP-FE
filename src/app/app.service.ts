@@ -19,6 +19,8 @@ export class AppService {
 
     public isLoading: boolean = false;
 
+    public cycleNumber: number = 1;
+
     constructor(
         private httpClient: HttpClient
     ) {}

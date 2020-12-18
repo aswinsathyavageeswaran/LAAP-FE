@@ -10,6 +10,7 @@ import { AppService } from '../app.service';
 export class NavComponent implements OnInit {
 
   @Input() title: string = "";
+  @Input() showLoanDetails: boolean = false;
 
   public displayUserMenu: boolean = false;
   public user: any;

@@ -72,3 +72,25 @@ th {
 td {
     border: 1px solid #dddddd;
 }
+
+.cycle-count {
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    width: 83px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 4px 6px #b6b6b6;
+}
+
+.seek-help-btn {
+    background: #ab1111;
+    border-color: #ab1111;
+}
+
+.choose-btn {
+    position: absolute;
+    right: 20px;
+}

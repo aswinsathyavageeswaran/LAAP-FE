@@ -1,8 +1,13 @@
-<app-nav title="Monitoring"></app-nav>
+<app-nav title="Monitoring" [showLoanDetails]="showLoanDetails"></app-nav>
 <div class="container pt-4" *ngIf="!appService.isLoading">
   <div class="row">
     <div class="col-12">
+      <div class="cycle-count">
+        Cycle : {{appService.cycleNumber}}
+      </div>
       <div class="text-right">
+        <button type="button" class="btn btn-primary mt-3 mr-3 seek-help-btn" (click)="showHelpPopup = true;">Seek
+          Help</button>
         <button type="button" class="btn btn-primary mt-3" (click)="redirectToMarketing();">Mark as Harvest</button>
       </div>
     </div>
@@ -15,7 +20,7 @@
           <div class="text-right">
             <small>{{notif.date | date: 'medium'}}</small>
           </div>
-          <img src="assets/new_star2.png" class="new-img" *ngIf="notif.isNew"/>
+          <img src="assets/new_star2.png" class="new-img" *ngIf="notif.isNew" />
         </div>
       </div>
     </div>
@@ -53,4 +58,56 @@
     </div>
   </div>
 </div>
+
+
+<div class="loan-popup backdrop" *ngIf="showHelpPopup">
+  <div class="popup-div vendor-popup" *ngIf="showHelpPopup">
+    <h3 class="text-center">Don't Worry !!</h3>
+    <p class="text-center mb-4">We are here to help you</p>
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="mb-3">
+          <h5 class="card-title">What is cause of your issue </h5>
+          <div class="row">
+            <div class="col">
+              <select class="custom-select" (change)="showAdvice = true;">
+                <option value="" selected>Select the cause</option>
+                <option value="proprietorship">Natural Disasters</option>
+                <option value="partnership">Lack of an Effective Marketing Program</option>
+                <option value="pvt">Collapsing farm prices</option>
+                <option value="onepersoncompany">Fragmented supply chains</option>
+                <option value="limitedcompany">Post-harvest losses</option>
+                <option value="lowerprices">Lower prices for agricultural commodities</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mt-4" *ngIf="showAdvice">
+            <div class="col">
+              <h5>Advices / Reccomendations</h5>
+              <div class="mt-4">
+                Loan topup
+                <button type="submit" class="btn choose-btn btn-sm btn-primary"
+                  (click)="showHelpPopup = false; showAdvice=false">Choose</button>
+              </div>
+              <hr />
+              <div class="mt-4">
+                Claim Insurance
+                <button type="submit" class="btn choose-btn btn-sm btn-primary"
+                  (click)="showHelpPopup = false; showAdvice=false">Choose</button>
+              </div>
+              <hr />
+              <div class="mt-4">
+                Take expert opinion from Subject Matter Experts.
+                <button type="submit" class="btn choose-btn btn-sm btn-primary"
+                  (click)="showHelpPopup = false; showAdvice=false">Choose</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <app-loader></app-loader>
