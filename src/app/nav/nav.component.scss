@@ -1,0 +1,23 @@
+.header-det {
+    background: #fff;
+    padding: 4px 10px;
+    color: #248fbd;
+    margin-top: 3px;
+    display: inline-block;
+    border-radius: 7px;
+    box-shadow: 0 0 5px #0672a0;
+    margin-left: 123px;
+
+    .det-inner {
+        margin-left: 10px;
+    }
+
+    .sep {
+        margin: 0 20px;
+        display: inline-block;
+        width: 1px;
+        height: 20px;
+        border-left: 1px dashed #248fbd;
+        vertical-align: text-bottom;
+    }
+}
