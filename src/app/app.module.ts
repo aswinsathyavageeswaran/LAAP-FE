@@ -14,6 +14,7 @@ import { LoanApproveComponent } from './loan-approve/loan-approve.component';
 import { MonitoringComponent } from './monitoring/monitoring.component';
 import { MarketTrendComponent } from './market-trend/market-trend.component';
 import { HttpClientModule } from "@angular/common/http";
+import { BankComponentComponent } from './bank-component/bank-component.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from "@angular/common/http";
     SuggestedVendorsComponent,
     LoanApproveComponent,
     MonitoringComponent,
-    MarketTrendComponent
+    MarketTrendComponent,
+    BankComponentComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,6 @@
             <option value="" selected>Select the type of business</option>
             <option value="agriculture">Agriculture</option>
             <option value="software">Software Industry</option>
-            <option value="software">Partnership</option>
           </select>
         </div>
       </div>
@@ -21,7 +20,7 @@
 
   <div class="card mt-4 survey" *ngIf="displaySecondQuestion">
     <div class="card-body">
-      <h5 class="card-title">2.	Type of crop </h5>
+      <h5 class="card-title">2.	Type of Crop </h5>
       <div class="row">
         <div class="col">
           <select class="custom-select" [(ngModel)]="cropType" (change)="onSelectCrop();">
@@ -34,7 +33,26 @@
     </div>
   </div>
 
-  <div class="card mt-4 survey" *ngIf="displaySecondQuestion && displayThirdQuestion">
+  <div class="card mt-4 survey" *ngIf="selectedSoftware">
+    <div class="card-body">
+      <h5 class="card-title">2.	Type of Business </h5>
+      <div class="row">
+        <div class="col">
+          <select class="custom-select" [(ngModel)]="cropType" (change)="onSelectCrop();">
+            <option value="" selected>Select the type of business</option>
+            <option value="proprietorship">Proprietorship</option>
+            <option value="partnership">Partnership</option>
+            <option value="pvt">Pvt.Ltd</option>
+            <option value="onepersoncompany">One Person Company</option>
+            <option value="limitedcompany">Limited Company</option>
+            <option value="limitedcompany">Not Registered</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4 survey" *ngIf="(displaySecondQuestion || selectedSoftware) && displayThirdQuestion">
     <div class="card-body">
       <h5 class="card-title">3.	Location</h5>
       <div class="row">

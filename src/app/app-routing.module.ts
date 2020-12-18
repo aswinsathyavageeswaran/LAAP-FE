@@ -9,6 +9,7 @@ import { SuggestedVendorsComponent } from './suggested-vendors/suggested-vendors
 import { LoanApproveComponent } from './loan-approve/loan-approve.component';
 import { MonitoringComponent } from './monitoring/monitoring.component';
 import { MarketTrendComponent } from './market-trend/market-trend.component';
+import { BankComponentComponent } from './bank-component/bank-component.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'approved', component: LoanApproveComponent },
   { path: 'monitoring', component: MonitoringComponent },
   { path: 'marketing', component: MarketTrendComponent },
+  { path: 'bank', component: BankComponentComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

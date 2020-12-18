@@ -12,6 +12,13 @@ export class AppService {
         password: "password"
     };
 
+    public bankUser: any = {
+        name: "ABCBank",
+        password: "password"
+    }
+
+    public isLoading: boolean = false;
+
     constructor(
         private httpClient: HttpClient
     ) {}

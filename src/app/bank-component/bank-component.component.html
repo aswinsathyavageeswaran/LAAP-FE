@@ -1,0 +1,51 @@
+<app-nav title="Report"></app-nav>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h5 class="mt-4">Report</h5>
+      <hr/>
+      <table class="table shd">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Sl#</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Account Number</th>
+            <th scope="col">Loan Type</th>
+            <th scope="col">Loan Amount</th>
+            <th scope="col">Customer Risk Score</th>
+            <th scope="col">Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr [ngClass]="{'selected': selectedTable == 0}">
+            <td scope="row">2</td>
+            <td>Muhammed Saleem</td>
+            <td>123XXXXXXX</td>
+            <td>Direct Farm Ownership</td>
+            <td class="text-center">$600,000</td>
+            <td class="text-center risk-score">6 / 10</td>
+            <td>Risk Assessment Needed</td>
+          </tr>
+          <tr [ngClass]="{'selected': selectedTable == 0}">
+            <td scope="row">3</td>
+            <td>Muhammed Saleem</td>
+            <td>554XXXXXXX</td>
+            <td>Direct Down Payment</td>
+            <td class="text-center">$400,000</td>
+            <td class="text-center" class="text-center risk-score">7 / 10</td>
+            <td></td>
+          </tr>
+          <tr [ngClass]="{'selected': selectedTable == 0}">
+            <td scope="row">4</td>
+            <td>Muhammed Saleem</td>
+            <td>765XXXXXXX</td>
+            <td>Direct Farm Ownership</td>
+            <td class="text-center">$1000,000</td>
+            <td class="text-center risk-score">4 / 10</td>
+            <td>Risk Assessment Needed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,7 @@ export class SurveyComponent implements OnInit {
   public displaySecondQuestion: boolean = false;
   public displayThirdQuestion: boolean = false;
   public displayFourthQuestion: boolean = false;
+  public selectedSoftware: boolean = false;
   public businessType: string = "";
   public cropType: string = "";
   public location: string = "";
@@ -33,6 +34,7 @@ export class SurveyComponent implements OnInit {
   public onSelectType(): void {
     this.reset();
     this.displaySecondQuestion = this.businessType == "agriculture" ? true : false;
+    this.selectedSoftware = this.businessType == "software" ? true : false;
   }
 
   public onSelectCrop(): void {
@@ -72,6 +74,7 @@ export class SurveyComponent implements OnInit {
     this.displayFourthQuestion = false;
     this.displaySecondQuestion = false;
     this.displayThirdQuestion = false;
+    this.selectedSoftware = false;
   }
 
 }
