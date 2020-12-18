@@ -237,34 +237,36 @@
       <p class="text-center">Please Verify and Confirm you bank account details.</p>
       <div class="row">
         <div class="col-12">
-          <div>
-            <label><strong>Account ID : </strong></label>
-            <span>{{accountDetails.AccountDetails.AccountId}}</span>
-          </div>
-          <div>
-            <label><strong>Account Name : </strong></label>
-            <span>{{accountDetails.AccountDetails.AccountName}}</span>
-          </div>
-          <div>
-            <label><strong>Currency : </strong></label>
-            <span>{{accountDetails.AccountDetails.Currency}}</span>
-          </div>
-          <div>
-            <label><strong>Customer Type : </strong></label>
-            <span>{{accountDetails.AccountDetails.CustomerType}}</span>
-          </div>
-          <div>
-            <label><strong>Account Type : </strong></label>
-            <span>{{accountDetails.AccountDetails.AccountType}}</span>
-          </div>
-          <div>
-            <label><strong>Account Status : </strong></label>
-            <span>{{accountDetails.AccountDetails.AccountStatus}}</span>
-          </div>
-          <div>
-            <label><strong>Account Ownership : </strong></label>
-            <span>{{accountDetails.AccountDetails.AccountOwnership}}</span>
-          </div>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Account ID : 
+              <span>{{accountDetails.AccountDetails.AccountId}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Account Name : 
+              <span>{{accountDetails.AccountDetails.AccountName}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Currency : 
+              <span>{{accountDetails.AccountDetails.Currency}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Customer Type : 
+              <span>{{accountDetails.AccountDetails.CustomerType}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Account Type : 
+              <span>{{accountDetails.AccountDetails.AccountType}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Account Status : 
+              <span>{{accountDetails.AccountDetails.AccountStatus}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Account Ownership : 
+              <span>{{accountDetails.AccountDetails.AccountOwnership}}</span>
+            </li>
+          </ul>
         </div>
         <div class="col-12 text-right mt-3">
           <hr/>
