@@ -285,6 +285,10 @@ carousel.slide-animated {
             &.cli {
                 background-color: #d14eaf;;
             }
+
+            &.ngo {
+                background-color: green;
+            }
           }
           .pointer:after {
             content: "";
