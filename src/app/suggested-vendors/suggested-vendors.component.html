@@ -169,6 +169,64 @@
       </div>
     </div>
   </div>
+  <!-- NGOS -->
+  <div class="row mt-4">
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedNGOCard = 0" [ngClass]="{'selected': isSelectedNGOCard == 0}">
+        <div class="pointer cli">
+          <span class="horizontal">Soil test lab</span>
+        </div>
+        <img src="assets/motzz.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title"><a href="http://www.motzzlaboratory.com/" target="_blank">Motzz Laboratory Inc</a></h6>
+          <p class="card-text">Motzz Laboratory strives to be a competent partner assisting engineers and growers with their analytical needs. Agricultural testing – soil and plant testing for nutrients necessary to grow crops.</p>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedNGOCard = 1" [ngClass]="{'selected': isSelectedNGOCard == 1}">
+        <div class="pointer cli">
+          <span class="horizontal">Soil test lab</span>
+        </div>
+        <img src="assets/agrolab.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title"><a href = "https://www.agrolab.us/" target="_blank">Agrolab Inc</a></h6>
+          <p class="card-text">AgroLab Inc. was established in 2010 as a turn key agronomy lab in support of agronomist, farmers, turf specialist, manufactures and others.  AgroLab is located on Delmarva and services customers.</p>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedNGOCard = 2" [ngClass]="{'selected': isSelectedNGOCard == 2}">
+        <div class="pointer cli">
+          <span class="horizontal">Soil test lab</span>
+        </div>
+        <img src="assets/brook.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title"><a href = "https://www.blinc.com/services/soil-analysis" target="_blank">Brookside Laboratories Inc</a></h6>
+          <p class="card-text">Brookside is the only laboratory in the world offering complete agricultural/turf, environmental, accredited (ISO 17025) geotechnical testing and soil health testing services.</p>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedNGOCard = 3" [ngClass]="{'selected': isSelectedNGOCard == 3}">
+        <div class="pointer cli">
+          <span class="horizontal">Soil test lab</span>
+        </div>
+        <img src="assets/rockriver.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title"><a href="https://rockriverlab.com/" target="_blank">Rock River Laboratory Inc</a></h6>
+          <p class="card-text">We're a family-owned laboratory network providing production assistance to the agriculture industry through progressive techniques, research-supported analyses, and unsurpassed customer service.</p>
+          <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="text-right">
     <button type="button" class="btn btn-primary mt-3" (click)="redirectToApprove();">Proceed</button>
   </div>
@@ -230,51 +288,5 @@
     </div>
   </div>
 </div>
-
-<!-- <div class="loan-popup backdrop" *ngIf="openLoanPopup"  (click)="openLoanPopup = false;">
-  <div class="popup-div">
-      <h3 class="text-center">Bank Account Details.</h3>
-      <p class="text-center">Please Verify and Confirm you bank account details.</p>
-      <div class="row">
-        <div class="col-12">
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Account ID : 
-              <span>{{accountDetails.AccountDetails.AccountId}}</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Account Name : 
-              <span>{{accountDetails.AccountDetails.AccountName}}</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Currency : 
-              <span>{{accountDetails.AccountDetails.Currency}}</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Customer Type : 
-              <span>{{accountDetails.AccountDetails.CustomerType}}</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Account Type : 
-              <span>{{accountDetails.AccountDetails.AccountType}}</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Account Status : 
-              <span>{{accountDetails.AccountDetails.AccountStatus}}</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Account Ownership : 
-              <span>{{accountDetails.AccountDetails.AccountOwnership}}</span>
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 text-right mt-3">
-          <hr/>
-          <button type="button" class="btn btn-secondary" (click)="saveLoanPopup()">Cancel</button>
-          <button type="button" class="btn btn-primary ml-3" (click)="saveLoanPopup()" >Confirm</button>
-        </div>
-      </div>
-  </div>
-</div> -->
 
 <app-loader></app-loader>

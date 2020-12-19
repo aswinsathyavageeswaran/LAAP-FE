@@ -11,6 +11,7 @@ export class SuggestedVendorsComponent implements OnInit {
 
   public isSelectedInsuranceCard: number = -1;
   public isSelectedSoilCard: number = -1;
+  public isSelectedNGOCard: number = -1;
   public title = "Suggested Vendors & Loans";
   public selectedTable: number = -1;
   public displayPopup: boolean = false;

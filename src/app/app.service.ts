@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AppService {
 
     public user: any = {
-        name: "admin",
+        name: "Bob",
         password: "password"
     };
 
