@@ -72,8 +72,13 @@
         <div class="link-wrap">
           Already Registered? <a class="link" (click)="redirectToLogin();">Sign In</a>
         </div>
-        <div class="text-right">
-          <button type="submit" class="btn btn-primary">Sign Up</button>
+        <div class="row text-right">
+          <div class="text-right submit-cancel-btn">
+            <button type="submit" (click)="redirectToLogin()" class="btn btn-secondary">Cancel</button>
+          </div>
+          <div class="text-right">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </div>
         </div>
       </div>
     </div>

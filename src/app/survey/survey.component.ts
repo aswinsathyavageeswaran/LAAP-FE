@@ -19,13 +19,13 @@ export class SurveyComponent implements OnInit {
   public hasError: boolean = false;
   public enableSubmit: boolean = false;
   public user: any;
-  public inputCity: string = "";
+  public inputCity: string = "Fresno";
   public title="Survey";
-  public totalInvestment: string = "";
-  public prodExpense: string = "";
-  public tradingExpense: string = "";
-  public harvestCycle: string = "";
-  public return: string = "";
+  public totalInvestment: string = "70000";
+  public prodExpense: string = "50000";
+  public tradingExpense: string = "20000";
+  public harvestCycle: string = "2";
+  public returns: string = "85000";
   public softwareType: string = "";
 
 

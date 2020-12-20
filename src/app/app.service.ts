@@ -17,6 +17,8 @@ export class AppService {
         password: "password"
     }
 
+    public weatherForecast: string = "";
+
     public isLoading: boolean = false;
 
     public cycleNumber: number = 1;
