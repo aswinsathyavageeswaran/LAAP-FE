@@ -133,7 +133,7 @@ body {
 .survey {
     &.card {
         // background: #6aa6b3;
-        background: #2789ad;
+        background: #8364ff;
         color: #fff;
     }
 }
@@ -305,10 +305,10 @@ carousel.slide-animated {
     }
     &.suggested {
         &.selected, &:hover {
-            background-color: #ffeddb;
+            background-color: #f6ebff;
 
             .pointer:after {
-                border-right: 10px solid #ffeddb !important;
+                border-right: 10px solid #f6ebff !important;
             }
         }
         .card-title {
@@ -361,7 +361,7 @@ carousel.slide-animated {
             }
 
             &.ngo {
-                background-color: green;
+                background-color: #2fc7df;
             }
           }
           .pointer:after {

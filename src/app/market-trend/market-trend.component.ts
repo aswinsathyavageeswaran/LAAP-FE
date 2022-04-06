@@ -13,7 +13,6 @@ export class MarketTrendComponent implements OnInit {
   public totalCost: number = 0;
   public quantity: number = 0;
   public selectedIndex: number = 0;
-  public showLoanDetails: boolean = false;
 
   constructor(
     public appService: AppService,
@@ -25,7 +24,6 @@ export class MarketTrendComponent implements OnInit {
     var root = this;
 
     setTimeout(() => {
-      root.showLoanDetails = true;
       root.appService.isLoading = false;
     }, 2000);
   }
