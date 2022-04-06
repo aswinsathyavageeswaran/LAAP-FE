@@ -1,4 +1,15 @@
-<div class="main-wrapper">
-    <router-outlet></router-outlet>
-    <div class="footer">LAAP &copy; 2020-21. All Rights Reserved.</div>
+<div class="main-wrapper" [ngClass]="{'outer-page': isOuterPage}">
+    <div *ngIf="!isOuterPage" class="side-nav">
+        <div class="nav-logo">
+            <img width="100" src="assets/leap.png"/>
+        </div>
+        <div class="side-nav-menu">
+            <a routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+            <a routerLink="/about" routerLinkActive="active-link">About</a>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="footer">LEAP &copy; 2022-23. All Rights Reserved.</div>
 </div>

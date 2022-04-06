@@ -18,6 +18,4 @@ export class RegisterComponent implements OnInit {
   public redirectToLogin(): void {
     this.router.navigateByUrl("/login");
   }
-  
-
 }

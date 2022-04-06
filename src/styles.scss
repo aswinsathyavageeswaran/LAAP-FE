@@ -1,13 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: roboto,Roboto,Helvetica Neue,sans-serif;
+}
 .main-wrapper {
     min-height: 100vh;
     display: inline-block;
     width: 100%;
     position: relative;
     padding-bottom: 32px;
-    background-image: url("assets/graphic-design-bg.jpg");
+    background-image: url("assets/header.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: right 62px;
+
+    &.outer-page {
+        background-position: right top;
+
+        .page-wrapper {
+            margin-left: 0;
+        }
+    }
+}
+
+.page-wrapper {
+    margin-left: 200px;
 }
 
 .footer {
@@ -65,12 +80,23 @@
 
 .btn-primary {
     color: #fff;
-    background-color: #176373;
-    border-color: #176373;
+    // background-color: #176373;
+    // border-color: #176373;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: linear-gradient(180deg,rgba(105,78,214,1),rgba(193,55,162,1));
 
     &:hover {
         background-color: #176373;
-        border-color: #176373;
+        //border-color: #176373;
+    }
+
+    &:focus,
+    &:active,
+    &:active:focus {
+        border: none;
+        box-shadow: none!important;
     }
 }
 
@@ -132,6 +158,7 @@ hr {
 .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
+    margin-left: 20px;
 
     .title {
         display: inline-block;
@@ -148,6 +175,7 @@ hr {
 .user-menu {
     .nav-link {
         cursor: pointer;
+        display: inline;
 
         &:hover {
             color: rgba(0, 0, 0, 0.7);
@@ -155,6 +183,52 @@ hr {
 
         &.open {
             color: rgba(0, 0, 0, 0.7);
+        }
+    }
+
+    .dropdown-menu {
+        width: 280px;
+        padding: 0;
+
+        .top-panel {
+            display: block;
+            background-color: #eee;
+            padding-top: 10px;
+        }
+
+        .avatar {
+            display: block;
+            width: 110px;
+            height: 110px;
+            margin: auto;
+            text-align: center;
+            font-size: 42px;
+            color: #fff;
+            padding-top: 20px;
+            border-radius: 50%;
+            background: linear-gradient(180deg,rgba(105,78,214,1),rgba(193,55,162,1));
+        }
+
+        p {
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .btm-panel {
+            display: block;
+            padding: 0 10px 15px;
+
+            button {
+                border: none;
+                width: 100%;
+                height: 30px;
+                color: #fff;
+                line-height: 28px;
+                font-size: 12px;
+                border-radius: 10px;
+                background-color: rgba(105,78,214,1);
+            }
         }
     }
 }
@@ -451,4 +525,23 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     height: 100%;
     padding-top: 250px;
+}
+
+.dropdown-toggle {
+    &::after {
+        border: none;
+    }
+}
+
+.header-default {
+    color: #694ed6;
+    font-weight: bold;
+    font-family: Futura EF,futura-pt,Futura,Hind,Verdana,Arial Black,sans-serif;
+}
+
+.nav-item {
+    a {
+        font-weight: bold;
+        font-family: Futura EF,futura-pt,Futura,Hind,Verdana,Arial Black,sans-serif;
+    }
 }

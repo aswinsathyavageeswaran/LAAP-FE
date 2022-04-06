@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -11,17 +11,14 @@ export class AppService {
         name: "Bob",
         password: "password"
     };
-
     public bankUser: any = {
         name: "ABCBank",
         password: "password"
-    }
-
+    };
     public weatherForecast: string = "";
-
     public isLoading: boolean = false;
-
     public cycleNumber: number = 1;
+    public isOuterPage$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
     constructor(
         private httpClient: HttpClient

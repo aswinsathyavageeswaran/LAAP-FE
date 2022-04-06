@@ -15,9 +15,4 @@ export class DashboardComponent implements OnInit {
   public ngOnInit(): void {
     // this.router.navigateByUrl("/survey");
   }
-
-  public redirectToSurvey(): void {
-    this.router.navigateByUrl("/survey");
-  }
-
 }

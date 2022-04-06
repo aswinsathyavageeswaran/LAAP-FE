@@ -14,6 +14,7 @@ export class NavComponent implements OnInit {
 
   public displayUserMenu: boolean = false;
   public user: any;
+  public nameStartsWith: string = "";
 
   constructor(
     private router: Router,
@@ -22,6 +23,7 @@ export class NavComponent implements OnInit {
 
   public ngOnInit(): void {
     this.user = this.appService.user;
+    this.nameStartsWith = this.user.name.charAt(0);
   }
 
   public signOut(): void {

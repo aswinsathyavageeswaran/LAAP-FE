@@ -10,6 +10,7 @@ import { LoanApproveComponent } from './loan-approve/loan-approve.component';
 import { MonitoringComponent } from './monitoring/monitoring.component';
 import { MarketTrendComponent } from './market-trend/market-trend.component';
 import { BankComponentComponent } from './bank-component/bank-component.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'monitoring', component: MonitoringComponent },
   { path: 'marketing', component: MarketTrendComponent },
   { path: 'bank', component: BankComponentComponent },
+  { path: 'about', component: AboutComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

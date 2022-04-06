@@ -12,7 +12,7 @@
 
 .application-image {
     position: absolute;
-    top: 153px;
+    top: 122px;
     left: 81px;
     img {
         width: 408px;
@@ -24,53 +24,10 @@
     margin-top: 2rem;
 }
 
-.how-it-works {
-    padding: 15px;
-    //background: #dceef885;
-    // background: #ced4eca6;
-    position: relative;
-    .steps {
-        font-weight: 600;
-        font-size: 19px;
-    }
-
-    .application-video {
-        position: absolute;
-        left: 654px;
-        top: 150px;
-        z-index: 99;
-    }
-
-    .upper-overlay {
-        position: absolute;
-        left: 654px;
-        top: 110px;
-        background: #fff;
-        width: 397px;
-        height: 59px;
-    }
-
-    .bottom-overlay {
-        position: absolute;
-        left: 654px;
-        top: 287px;
-        background: #fff;
-        width: 397px;
-        height: 82px;
-    }
-}
-
 .services {
     background: #fff;
     .header-container {
         margin-top: 1rem;
-    }
-}
-
-ol {
-    font-size: 19px;
-    li {
-        padding: 10px;
     }
 }
 
@@ -82,5 +39,4 @@ ol {
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-family: "Antonie";
 }
