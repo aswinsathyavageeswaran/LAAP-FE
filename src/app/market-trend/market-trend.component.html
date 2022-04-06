@@ -2,7 +2,7 @@
 <div class="container pt-4" *ngIf="!appService.isLoading">
   <div class="row">
     <div class="col-12">
-      <h5>Overview of Grape Market in United States</h5>
+      <h5>Overview of Woolen Fabric Market in United States</h5>
     </div>
     <div class="col-6">
       <div class="card market-graph-1">
@@ -109,19 +109,16 @@
     </div>
 
     <div class="col-12 mt-4">
-      <h5>Grape Offers in United States</h5>
+      <h5>Wool Offers in United States</h5>
     </div>
 
     <div class="col-3">
       <div class="card shd text-center no-hover marketing">
-        <img src="assets/grape1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title mb-0 marketing">
-            <a href="https://www.tridge.com/offers/CAN-9E6BE879" target="_blank">Red Table Grape</a>
-          </h6>
-          <p class="m-0">Flame</p>
-          <small class="price-txt">USD <strong>1.25 / KG</strong></small>
-          <p class="card-txt-1">EXW, Nogales, AZ and Los Angeles, CA<br/> <span>All prices valid until Dec 23, 2020</span></p>
+        <img src="assets/Wool-yarn.jpg" class="card-img-top" alt="...">
+        <div class="card-body">          
+          <p class="m-0">100% wool yarn wholesale, merino wool spinning</p>
+          <small class="price-txt">USD <strong>6.0-16.0 / KG</strong></small>
+          <p class="card-txt-1">1 Kilogram<span> (MOQ)</span></p>
           <div>
             <button type="button" class="btn btn-primary mt-3" (click)="selectedIndex = 0; openVendorPopup = true; totalCost=0; quantity=0;">Sign the Deal</button>
           </div>
@@ -131,14 +128,11 @@
 
     <div class="col-3">
       <div class="card shd text-center no-hover marketing">
-        <img src="assets/grape2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title mb-0 marketing">
-            <a href="https://www.tridge.com/offers/CAN-24387A39" target="_blank">Table Grapes from Italy</a>
-          </h6>
-          <p class="m-0">Whole / Fresh</p>
-          <small class="price-txt">EUR <strong>1.8 / KG</strong></small>
-          <p class="card-txt-1">EXW, Gioia, Tauro<br/> <span>All prices valid until Dec 22, 2020</span></p>
+        <img src="assets/Factory-price-wholesale-wool.jpg" class="card-img-top" alt="...">
+        <div class="card-body">         
+          <p class="m-0">Factory price wholesale wool and acrylic blended yarn</p>
+          <small class="price-txt">USD <strong>8.02-8.38 / KG</strong></small>
+          <p class="card-txt-1">50 Kilogram<span> (MOQ)</span></p>
           <div>
             <button type="button" class="btn btn-primary mt-3" (click)="selectedIndex = 1; openVendorPopup = true; totalCost=0; quantity=0;">Sign the Deal</button>
           </div>
@@ -148,14 +142,11 @@
 
     <div class="col-3">
       <div class="card shd text-center no-hover marketing">
-        <img src="assets/grape3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title mb-0 marketing">
-            <a href="https://www.tridge.com/offers/CAN-9D067A02" target="_blank">Fresh Seedless Grapes of Indian Origin</a>
-          </h6>
-          <p class="m-0">Thompson  / Fresh</p>
-          <small class="price-txt">USD <strong>1.15 / KG</strong></small>
-          <p class="card-txt-1">FOB, JNPT Port, Mumbai<br/> <span>All prices valid until Dec 22, 2020</span></p>
+        <img src="assets/wool-knitting.jpg" class="card-img-top" alt="...">
+        <div class="card-body">         
+          <p class="m-0">Wholesale wool knitting double twisted yarn for sweater knitting</p>
+          <small class="price-txt">USD <strong>14.5-15.5 / KG</strong></small>
+          <p class="card-txt-1">1000 Kilogram<span> (MOQ)</span></p>
           <div>
             <button type="button" class="btn btn-primary mt-3" (click)="selectedIndex = 2; openVendorPopup = true; totalCost=0; quantity=0;">Sign the Deal</button>
           </div>
@@ -165,14 +156,11 @@
 
     <div class="col-3">
       <div class="card shd text-center no-hover marketing">
-        <img src="assets/grape4.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title mb-0 marketing">
-            <a href="https://www.tridge.com/offers/CAN-3E7C3560" target="_blank">Sultani Grapes from Turkey</a>
-          </h6>
-          <p class="m-0">Thompson  / Chunks</p>
-          <small class="price-txt">USD <strong>1.00 / KG</strong></small>
-          <p class="card-txt-1">EXW, Mersin Port<br/> <span>All prices valid until Dec 21, 2020</span></p>
+        <img src="assets/Wool-yarn1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">         
+          <p class="m-0">Wholesale 2/26nm 100% pure wool worsted cashmere yarn</p>
+          <small class="price-txt">USD <strong>7.68-8.24 / KG</strong></small>
+          <p class="card-txt-1">1 Kilogram<span> (MOQ)</span></p>
           <div>
             <button type="button" class="btn btn-primary mt-3" (click)="selectedIndex = 3; openVendorPopup = true; totalCost=0; quantity=0;">Sign the Deal</button>
           </div>
@@ -181,8 +169,8 @@
     </div>
 
     <div class="col-12 mt-4">
-      <h5>Grape Domestic Price in USA</h5>
-      <div class="graph-1" *ngIf="!appService.isLoading"><img src="assets/graph.png" width="100%"></div>
+      <h5>Fine Wool Monthly Price - US cents per Kilogram</h5>
+      <div class="graph-1" *ngIf="!appService.isLoading"><img src="assets/wool_trend.JPG" width="100%"></div>
     </div>
   </div>
 </div>
