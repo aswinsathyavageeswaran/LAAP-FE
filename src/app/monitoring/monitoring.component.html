@@ -1,6 +1,19 @@
-<app-nav title="Monitoring" [showLoanDetails]="showLoanDetails"></app-nav>
+<app-nav title="Monitoring"></app-nav>
 <div class="container pt-4" *ngIf="!appService.isLoading">
   <div class="row">
+    <div class="col-12">
+      <div class="header-det">
+        <span class="det-inner"><strong>Loan ID :</strong> 01201550001</span>
+        <span class="sep"></span>
+        <span class="det-inner"><strong>Loan Amt :</strong> 50000 USD</span>
+        <span class="sep"></span>
+        <span class="det-inner"><strong>Loan Term :</strong> 10 yrs</span>
+        <span class="sep"></span>
+        <span class="det-inner"><strong>Maturity Date :</strong> Dec 18, 2031</span>
+        <span class="sep"></span>
+        <span class="det-inner"><strong>Outstanding Loan Amt :</strong> 45000 USD</span>
+      </div>
+    </div>
     <div class="col-12">
       <div class="cycle-count">
         Cycle : {{appService.cycleNumber}}
@@ -12,7 +25,7 @@
       </div>
     </div>
     <div class="col-3">
-      <h5>Notifications</h5>
+      <h5 class="header-default">Notifications</h5>
       <div>
         <div class="notify-box mb-4 style-{{notif.style}}" *ngFor="let notif of defaultNotifications">
           <div class="notify-div"><span class="notify-title">{{notif.type}}</span></div>
@@ -25,13 +38,13 @@
       </div>
     </div>
     <div class="col-9">
-      <h5>Grape Production of United States</h5>
+      <h5 class="header-default">Grape Production of United States</h5>
       <div class="graph-1"><img src="assets/grape-production.png" width="100%"></div>
-      <h5 class="mt-4">Export Trends of Grapes from United States</h5>
+      <h5 class="header-default mt-4">Export Trends of Grapes from United States</h5>
       <div class="graph-1 mb-4"><img src="assets/export_trends.png" width="100%"></div>
     </div>
     <div class="col-12 mb-4 pt-4 mt-3 weather-forecast">
-      <h5 class="mb-2">Weather Forecast</h5>
+      <h5 class="header-default mb-2">Weather Forecast</h5>
       <p>
         {{weatherData.description}}
       </p>

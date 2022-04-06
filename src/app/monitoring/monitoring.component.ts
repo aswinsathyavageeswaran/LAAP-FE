@@ -50,7 +50,6 @@ export class MonitoringComponent implements OnInit {
     }
   ]
 
-  public showLoanDetails: boolean = false;
   public showHelpPopup: boolean = false;
   public showAdvice: boolean = false;
 
@@ -65,7 +64,6 @@ export class MonitoringComponent implements OnInit {
     this.appService.isLoading = true;
     var root = this;
     setTimeout(() => {
-      root.showLoanDetails = true;
       root.appService.isLoading = false;
     }, 2000);
     let index = 0;

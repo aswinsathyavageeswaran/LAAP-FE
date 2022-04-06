@@ -2,7 +2,7 @@
 <div class="container mt-4" *ngIf="!appService.isLoading">
   <div class="row">
     <div class="col">
-      <h5 class="mt-4">Loans</h5>
+      <h4 class="header-default">Loans</h4>
       <hr/>
       <table class="table shd">
         <thead class="thead-dark">
@@ -48,11 +48,11 @@
       </table>
     </div>
   </div>
-  <h5 class="mt-4">Suggested Vendors</h5>
+  <h4 class="header-default mt-2">Suggested Vendors</h4>
   <hr/>
   <div class="row">
     <div class="col-3">
-      <div class="card shd ribbon-card text-center suggested" [ngClass]="{'selected': selectedCard != -1}">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 1" [ngClass]="{'selected': isSelectedInsuranceCard == 1}">
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="col-3">
-      <div class="card shd ribbon-card text-center suggested">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 2" [ngClass]="{'selected': isSelectedInsuranceCard == 2}">
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
@@ -78,7 +78,7 @@
       </div>
     </div>
     <div class="col-3">
-      <div class="card shd ribbon-card text-center suggested">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 3" [ngClass]="{'selected': isSelectedInsuranceCard == 3}">
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
@@ -91,7 +91,7 @@
       </div>
     </div>
     <div class="col-3">
-      <div class="card shd ribbon-card text-center suggested">
+      <div class="card shd ribbon-card text-center suggested" (click)="isSelectedInsuranceCard = 4" [ngClass]="{'selected': isSelectedInsuranceCard == 4}">
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>

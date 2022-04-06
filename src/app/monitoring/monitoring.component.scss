@@ -74,23 +74,53 @@ td {
 }
 
 .cycle-count {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     background: #fff;
     width: 83px;
-    padding: 10px;
+    color: #8642ba;
+    padding: 4px 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     overflow: hidden;
+    white-space: nowrap;
     box-shadow: 0 4px 6px #b6b6b6;
 }
 
 .seek-help-btn {
-    background: #ab1111;
-    border-color: #ab1111;
+    background: #bf3a95;
+    border-color: #bf3a95;
+
+    &:active {
+        background: #bf3a95 !important;
+        border-color: #bf3a95 !important;
+    }
 }
 
 .choose-btn {
     position: absolute;
     right: 20px;
+}
+
+.header-det {
+    background: #fff;
+    padding: 4px 10px;
+    color: #8642ba;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    box-shadow: 0 0 5px #484848;
+    font-size: 14px;
+
+    .det-inner {
+        margin-left: 10px;
+    }
+
+    .sep {
+        margin: 0 20px;
+        display: inline-block;
+        width: 1px;
+        height: 20px;
+        border-left: 1px dashed #248fbd;
+        vertical-align: text-bottom;
+    }
 }
