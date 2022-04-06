@@ -17,7 +17,7 @@
         <tbody>
           <tr [ngClass]="{'selected': selectedTable == 0}">
             <!-- <td scope="row">1</td> -->
-            <td>Direct Farm Ownership</td>
+            <td>Small Business Express Loan </td>
             <td>$600,000</td>
             <td>Term: Upto 40 years | Interest rate: Fixed</td>
             <td>
@@ -26,28 +26,20 @@
           </tr>
           <tr [ngClass]="{'selected': selectedTable == 1}">
             <!-- <td scope="row">2</td> -->
-            <td>Direct Down Payment</td>
+            <td>Personal loans for business use</td>
             <td>
-              45% of the lesser of the following
-              <ul>
-                <li>
-                  the farm or ranch purchased price
-                </li>
-                <li>
-                  the appraised value
-                </li>
-              </ul>
+              Up to $35,000
             </td>
-            <td>Term: Upto 20 years | Interest rate: Fixed</td>
+            <td>Term: 3 – 5 years | Interest rate: 5.99% – 35% APR</td>
             <td>
               <button class="btn btn-primary btn-sm" (click)="selectedTable = 1; getAccountDetails();">SELECT</button>
             </td>
           </tr>
           <tr [ngClass]="{'selected': selectedTable == 2}">
             <!-- <td scope="row">3</td> -->
-            <td>Direct Farm Ownership Participation</td>
-            <td>$600,000</td>
-            <td>Term : Upto 40 years | Interest rate: direct Farm ownership rate less than 2% with a floor of 2.5%</td>
+            <td>Microloans</td>
+            <td>Up to $50,000</td>
+            <td>Term : up to 6 years | Interest rate: starting at around 7%</td>
             <td>
               <button class="btn btn-primary btn-sm" (click)="selectedTable = 2; getAccountDetails();">SELECT</button>
             </td>
@@ -64,10 +56,10 @@
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
-        <img src="assets/ace.jpg" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/aligned.png" class="card-img-top" alt="..." style="width: 150px;" ></div>
         <div class="card-body">
-          <h6 class="card-title"><a target="_blank" href="https://www.axiagroup.net/insurance-company/ace-ina-insurance" target="_blank" >ACE American Insurance Company</a></h6>
-          <p class="card-text">ACE American Insurance Company operates as an insurance company. The Company offers property and casualty insurance services. ACE American Insurance serves customers worldwide.</p>
+          <h6 class="card-title"><a target="_blank" href="https://www.alignedinsurance.com/online-insurance-products/" target="_blank" >Aligned Insurance</a></h6>
+          <p class="card-text">Aligned Insurance Company operates as an insurance company. The Company offers professional Advocate in the complex and ever changing Canadian insurance marketplace. </p>
           <div><a (click)="selectButton($event)" class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -77,10 +69,10 @@
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
-        <img src="assets/agri.jpg" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/renomia.png" class="card-img-top" alt="..." style="width: 180px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href="https://www.aaic.com" target="_blank">American Agri-Business Insurance Company</a></h6>
-          <p class="card-text">American Agri Business Insurance Co operates as an insurance company. The Company offers crop insurance services. American Agri Business Insurance serves customers in the United States.</p>
+          <h6 class="card-title"><a href="https://www.renomia.com/textile-industry" target="_blank">Renomia Insurance</a></h6>
+          <p class="card-text">Renomia operates as an insurance company. The Company offers Insuring risks inherent in textile manufacturing is a specialization in its own right.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -90,10 +82,10 @@
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
-        <img src="assets/hudson.png" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/insureon.png" class="card-img-top" alt="..." style="width: 180px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href = "https://hudsoninsgroup.com/offices/new-york/" target="_blank">Hudson Insurance Company</a></h6>
-          <p class="card-text">Hudson is a market-leading specialty insurer that offers a wide range of property and casualty insurance products to corporations, professional firms , wholesalers and program administrators.</p>
+          <h6 class="card-title"><a href = "https://www.insureon.com/manufacturers-business-insurance/apparel" target="_blank">Insureon Insurance Company</a></h6>
+          <p class="card-text">Insureon are the #1 independent marketplace for online delivery of small business insurance. We help business owners compare quotes from top-rated providers.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -103,10 +95,10 @@
         <div class="pointer ins">
           <span class="horizontal">Insurance</span>
         </div>
-        <img src="assets/crs.png" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/usabi.png" class="card-img-top" alt="..." style="width: 180px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href = "https://www.cropriskservices.com/" target="_blank" >Crop Risk Services, Inc</a></h6>
-          <p class="card-text">Crop Risk Services is a leading primary crop insurance managing general agent, serving North American farmers with a affordable crop income protection and continue to meet, this challenge.</p>
+          <h6 class="card-title"><a href = "https://www.businessinsuranceusa.com/business-insurance-manufacturers" target="_blank" >USA Business Insurance</a></h6>
+          <p class="card-text">USA Business Insurance helps textile manufacturers generally create products to sell to retail establishments and outlet stores. Some textile manufacturers provide their goods one step before that instead.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -116,12 +108,12 @@
     <div class="col-3">
       <div class="card shd ribbon-card text-center suggested" (click)="isSelectedSoilCard = 0" [ngClass]="{'selected': isSelectedSoilCard == 0}">
         <div class="pointer cli">
-          <span class="horizontal">Soil test lab</span>
+          <span class="horizontal">Fabric test</span>
         </div>
-        <img src="assets/motzz.jpg" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/qima.png" class="card-img-top" alt="..." style="width: 170px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href="http://www.motzzlaboratory.com/" target="_blank">Motzz Laboratory Inc</a></h6>
-          <p class="card-text">Motzz Laboratory strives to be a competent partner assisting engineers and growers with their analytical needs. Agricultural testing – soil and plant testing for nutrients necessary to grow crops.</p>
+          <h6 class="card-title"><a href="https://www.qima.com/testing/textile-fabric-quality-control" target="_blank">QIMA</a></h6>
+          <p class="card-text">QIMA provides a range of quality assurance and lab testing services to evaluate your textiles against your quality standards and the requirements of your destination market.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -130,12 +122,12 @@
     <div class="col-3">
       <div class="card shd ribbon-card text-center suggested" (click)="isSelectedSoilCard = 1" [ngClass]="{'selected': isSelectedSoilCard == 1}">
         <div class="pointer cli">
-          <span class="horizontal">Soil test lab</span>
+          <span class="horizontal">Fabric test</span>
         </div>
-        <img src="assets/agrolab.jpg" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/intertek.png" class="card-img-top" alt="..." style="width: 180px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href = "https://www.agrolab.us/" target="_blank">Agrolab Inc</a></h6>
-          <p class="card-text">AgroLab Inc. was established in 2010 as a turn key agronomy lab in support of agronomist, farmers, turf specialist, manufactures and others.  AgroLab is located on Delmarva and services customers.</p>
+          <h6 class="card-title"><a href = "https://www.intertek.com/textiles-apparel/textile-testing/" target="_blank">intertek</a></h6>
+          <p class="card-text">Intertek delivers Total Quality Assurance solutions for all your softlines products, including textiles like medical textiles and upholstery, apparel like activewear and children’s apparel, and soft home furnishings.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -144,12 +136,12 @@
     <div class="col-3">
       <div class="card shd ribbon-card text-center suggested" (click)="isSelectedSoilCard = 2" [ngClass]="{'selected': isSelectedSoilCard == 2}">
         <div class="pointer cli">
-          <span class="horizontal">Soil test lab</span>
+          <span class="horizontal">Fabric test</span>
         </div>
-        <img src="assets/brook.png" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/comgate.png" class="card-img-top" alt="..." style="width: 180px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href = "https://www.blinc.com/services/soil-analysis" target="_blank">Brookside Laboratories Inc</a></h6>
-          <p class="card-text">Brookside is the only laboratory in the world offering complete agricultural/turf, environmental, accredited (ISO 17025) geotechnical testing and soil health testing services.</p>
+          <h6 class="card-title"><a href = "https://www.compliancegate.com/clothing-textiles-lab-testing-united-states/" target="_blank">ComplianceGate</a></h6>
+          <p class="card-text">Compliancegate.com was launched to help brands and e-commerce businesses better understand the practical aspects of product safety, certification, labeling and lab testing.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -158,12 +150,12 @@
     <div class="col-3">
       <div class="card shd ribbon-card text-center suggested" (click)="isSelectedSoilCard = 3" [ngClass]="{'selected': isSelectedSoilCard == 3}">
         <div class="pointer cli">
-          <span class="horizontal">Soil test lab</span>
+          <span class="horizontal">Fabric test</span>
         </div>
-        <img src="assets/rockriver.png" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/testfbarics.png" class="card-img-top" alt="..." style="width: 190px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href="https://rockriverlab.com/" target="_blank">Rock River Laboratory Inc</a></h6>
-          <p class="card-text">We're a family-owned laboratory network providing production assistance to the agriculture industry through progressive techniques, research-supported analyses, and unsurpassed customer service.</p>
+          <h6 class="card-title"><a href="https://www.testfabrics.com/" target="_blank">Testfabrics, Inc.</a></h6>
+          <p class="card-text">Testfabrics, Inc. exists to "satisfy a need". That initial 'need’ in the mid 1930’s was to provide necessary and consistent textile test materials to the chemists working in the laboratories of the manufacturers and suppliers.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -174,12 +166,12 @@
     <div class="col-3">
       <div class="card shd ribbon-card text-center suggested" (click)="isSelectedNGOCard = 0" [ngClass]="{'selected': isSelectedNGOCard == 0}">
         <div class="pointer ngo">
-          <span class="horizontal">NGO</span>
+          <span class="horizontal">Distributers</span>
         </div>
-        <img src="assets/ashoka.png" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/jwm.png" class="card-img-top" alt="..." style="width: 180px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href="https://www.ashoka.org/en" target="_blank">Ashoka Innovators for the Public</a></h6>
-          <p class="card-text">Ashoka is an American NGO with a global network of more than 3.000 social organizers, where through them, it provides start-up capital and financing because they understand that agriculture is directly linked to human well-being.</p>
+          <h6 class="card-title"><a href="https://johnsonwoolenmills.com/" target="_blank">Johnson Woolen Mills</a></h6>
+          <p class="card-text">Backed by nearly 2 centuries of tradition, four generations of Vermont ownership and the pride of being hand-crafted in the USA, Johnson Woolen Mills is a world-wide source for rugged woolen outer wear for today's modern lifestyle.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -188,12 +180,12 @@
     <div class="col-3">
       <div class="card shd ribbon-card text-center suggested" (click)="isSelectedNGOCard = 1" [ngClass]="{'selected': isSelectedNGOCard == 1}">
         <div class="pointer ngo">
-          <span class="horizontal">NGO</span>
+          <span class="horizontal">Distributers</span>
         </div>
-        <img src="assets/institueforagri.png" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/perfect.png" class="card-img-top" alt="..." style="width: 160px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href = "https://www.iatp.org/" target="_blank">Institute for Agriculture and Trade Policy (IATP) </a></h6>
-          <p class="card-text">This research and advocacy organization is all about promoting fair, sustainable food and farm systems all over the world. They work with organizations from all corners of the earth to stop the excessive use of antibiotics in agriculture and aquaculture.</p>
+          <h6 class="card-title"><a href = "https://perfectex.com/" target="_blank">Perfectex Plus LLC</a></h6>
+          <p class="card-text">Perfectex was established in 1981.  For over 39 years we have been a premier supplier of superior quality neoprene rubber sheets, hook and loop fasteners, webbing, narrow fabrics, trim, and other commercial and industrial textiles and hardware.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -202,12 +194,12 @@
     <div class="col-3">
       <div class="card shd ribbon-card text-center suggested" (click)="isSelectedNGOCard = 2" [ngClass]="{'selected': isSelectedNGOCard == 2}">
         <div class="pointer ngo">
-          <span class="horizontal">NGO</span>
+          <span class="horizontal">Distributers</span>
         </div>
-        <img src="assets/oneacrefund.png" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/awc.png" class="card-img-top" alt="..."></div>
         <div class="card-body">
-          <h6 class="card-title"><a href = "https://oneacrefund.org/" target="_blank">One Acre Fund</a></h6>
-          <p class="card-text">Sub-Saharan farmers are supported by One Acre Fund to get the tools they need to harvest and process their own food. They believe that farmers are the solution to hunger and poverty in developing countries.</p>
+          <h6 class="card-title"><a href = "https://americanwoolen.com/" target="_blank">American Woolen Company</a></h6>
+          <p class="card-text">The brand bought the mills and ran them for 26 years, investing considerable resources to maintain the structures, acquire new machinery, and expand capabilities.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>
       </div>
@@ -216,11 +208,11 @@
     <div class="col-3">
       <div class="card shd ribbon-card text-center suggested" (click)="isSelectedNGOCard = 3" [ngClass]="{'selected': isSelectedNGOCard == 3}">
         <div class="pointer ngo">
-          <span class="horizontal">NGO</span>
+          <span class="horizontal">Distributers</span>
         </div>
-        <img src="assets/ecoagri.png" class="card-img-top" alt="...">
+        <div class="imgContainer"><img src="assets/mood.png" class="card-img-top" alt="..." style="width: 150px;"></div>
         <div class="card-body">
-          <h6 class="card-title"><a href="http://ecoagriculture.org/" target="_blank">Ecoagriculture Partners </a></h6>
+          <h6 class="card-title"><a href="https://www.moodfabrics.com/" target="_blank">Mood Fabrics </a></h6>
           <p class="card-text">Agricultural communities which need support to manage their landscapes can find help with this compassionate NGO. A great initiative aimed at enhancing rural livelihoods and producing food in sustainable ways.</p>
           <div><a class="btn btn-primary btn-sm">I'm Interested</a></div>
         </div>

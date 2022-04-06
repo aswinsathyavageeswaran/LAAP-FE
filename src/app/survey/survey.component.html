@@ -10,8 +10,9 @@
         <div class="col">
           <select class="custom-select" [(ngModel)]="businessType" (change)="onSelectType();">
             <option value="" selected>Select the type of business</option>
-            <option value="agriculture">Agriculture</option>
-            <option value="software">Software Industry</option>
+            <option value="textile">Textile Industry</option>
+            <option value="agriculture">Agriculture</option>            
+            <option value="software">Software Industry</option>            
           </select>
         </div>
       </div>
@@ -20,10 +21,26 @@
 
   <div class="card mt-4 survey" *ngIf="displaySecondQuestion">
     <div class="card-body">
+      <h5 class="card-title">2.	Industry Category</h5>
+      <div class="row">
+        <div class="col">
+          <select class="custom-select" [(ngModel)]="industryType" (change)="onSelectIndustry();">
+            <option value="" selected>Select the type of industry</option>
+            <option value="small" >Small Scale</option>
+            <option value="medium">Medium Scale</option>
+            <option value="large">Large Scale</option>           
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4 survey" *ngIf="selectedAgri">
+    <div class="card-body">
       <h5 class="card-title">2.	Type of Crop </h5>
       <div class="row">
         <div class="col">
-          <select class="custom-select" [(ngModel)]="cropType" (change)="onSelectCrop();">
+          <select class="custom-select" [(ngModel)]="cropType">
             <option value="" selected>Select the type of crop</option>
             <option value="orange">Orange</option>
             <option value="grapes">Grapes</option>
@@ -38,7 +55,7 @@
       <h5 class="card-title">2.	Type of Business </h5>
       <div class="row">
         <div class="col">
-          <select class="custom-select" [(ngModel)]="softwareType" (change)="onSelectCrop();">
+          <select class="custom-select" [(ngModel)]="softwareType" >
             <option value="" selected>Select the type of business</option>
             <option value="proprietorship">Proprietorship</option>
             <option value="partnership">Partnership</option>
@@ -52,30 +69,96 @@
     </div>
   </div>
 
-  <div class="card mt-4 survey" *ngIf="(displaySecondQuestion || selectedSoftware) && displayThirdQuestion">
+  <div class="card mt-4 survey" *ngIf="(displaySecondQuestion || selectedIndustry) && displayThirdQuestion">
     <div class="card-body">
-      <h5 class="card-title">3.	Location</h5>
+      <h5 class="card-title">3.	Type of Fabric</h5>
+      <div class="row">
+        <div class="col">
+          <select class="custom-select" [(ngModel)]="fabric" (change)="onSelectFabric();">
+            <option value="" selected>Select Fabric</option>
+            <option value="cotton">Cotton</option>
+            <option value="wool">Wool</option>
+            <option value="linen">linen</option>
+            <option value="silk">silk</option>
+          </select>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4 survey" *ngIf="(displayThirdQuestion || selectedIndustry) && displayForthQuestion">
+    <div class="card-body">
+      <h5 class="card-title">4.	Location</h5>
       <div class="row">
         <div class="col">
           <select class="custom-select" [(ngModel)]="location" (change)="onSelectLocation();">
             <option value="" selected>Select location</option>
-            <option value="sanfranciso">Texas</option>
-            <option value="california">California</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
           </select>
         </div>
         <div class="col-12">
           <div class="alert alert-danger text-center mt-3" role="alert" *ngIf="hasError">
-            Dear <span class="text-capitalize">{{user.name}}</span>, It's not advisable to cultivate grapes in this location.
+            Dear <span class="text-capitalize">{{user.name}}</span>, The Fabric and the targeted Market doesn't match.
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div *ngIf="displayFourthQuestion">
+  <div *ngIf="displayFifthQuestion">
     <div class="card mt-4 survey">
       <div class="card-body">
-        <h5 class="card-title">4.	Years of experience in Farming</h5>
+        <h5 class="card-title">5.	Years of experience in Textile</h5>
         <div class="row">
           <div class="col">
             <form class="form-inline">
@@ -99,7 +182,7 @@
 
     <div class="card mt-4 survey">
       <div class="card-body">
-        <h5 class="card-title">5.	I possess the legal capacity to obtain a loan</h5>
+        <h5 class="card-title">6.	I possess the legal capacity to obtain a loan</h5>
         <div class="row">
           <div class="col">
             <form class="form-inline">
@@ -123,12 +206,23 @@
 
     <div class="card mt-4 survey">
       <div class="card-body">
-        <h5 class="card-title">6.	City</h5>
+        <h5 class="card-title">7.	I have license for importing selected fabric</h5>
         <div class="row">
           <div class="col">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Enter City" [(ngModel)]="inputCity" (ngModelChange)="onSelectCity();"/>
+            <form class="form-inline">
+            <div class="form-check mr-4">
+              <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1">
+              <label class="form-check-label" for="radio1">
+                No
+              </label>
             </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio1" id="radio2" value="option2" checked>
+              <label class="form-check-label" for="radio2">
+                Yes
+              </label>
+            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -136,36 +230,30 @@
 
     <div class="card mt-4 survey">
       <div class="card-body">
-        <h5 class="card-title">7.	Business Case</h5>
+        <h5 class="card-title">8.	Business Case</h5>
         <div class="row">
-          <div class="col-4">
+          <div class="col-5">
             <span class="business-case-label">Total Investment</span>
             <div class="form-group mt-2">
               <input type="text" class="form-control" placeholder="Enter Total Investment" [(ngModel)]="totalInvestment"/>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-5">
             <span class="business-case-label">Production Expense</span>
             <div class="form-group mt-2">
               <input type="text" class="form-control" placeholder="Production Expense" [(ngModel)]="prodExpense"/>
             </div>
-          </div>
-          <div class="col-4">
-            <span class="business-case-label">Trading Expense</span>
+          </div>          
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-5">
+            <span class="business-case-label">Import Expense</span>
             <div class="form-group mt-2">
               <input type="text" class="form-control" placeholder="Trading Expense" [(ngModel)]="tradingExpense"/>
             </div>
           </div>
-        </div>
-
-        <div class="row mt-2">
-          <div class="col-4">
-            <span class="business-case-label">Harvest cycle</span>
-            <div class="form-group mt-2">
-              <input type="text" class="form-control" placeholder="Enter Harvesting cycle" [(ngModel)]="harvestCycle"/>
-            </div>
-          </div>
-          <div class="col-4">
+          <div class="col-5">
             <span class="business-case-label">Expected returns</span>
             <div class="form-group mt-2">
               <input type="text" class="form-control" placeholder="Expected return on each harvesting cycle" [(ngModel)]="returns"/>
@@ -177,7 +265,7 @@
 
     <div class="card mt-4 survey">
       <div class="card-body">
-        <h5 class="card-title">8.	I have the training, education, or experience that enables me to effectively manage my farm</h5>
+        <h5 class="card-title">9.	I have the training, education, or experience that enables me to effectively manage my business</h5>
         <div class="row">
           <div class="col">
             <form class="form-inline">
@@ -199,7 +287,7 @@
       </div>
     </div>
     <div class="text-right">
-      <button type="button" [disabled]="!enableSubmit" class="btn btn-primary mt-3" (click)="redirectToVendors();">Submit</button>
+      <button type="button" class="btn btn-primary mt-3" (click)="redirectToVendors();">Submit</button>
     </div>
   </div>
 </div>

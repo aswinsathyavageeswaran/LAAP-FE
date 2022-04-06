@@ -11,10 +11,13 @@ export class SurveyComponent implements OnInit {
 
   public displaySecondQuestion: boolean = false;
   public displayThirdQuestion: boolean = false;
-  public displayFourthQuestion: boolean = false;
+  public displayForthQuestion: boolean = false;
+  public displayFifthQuestion: boolean = false;
+  public selectedAgri: boolean = false;
   public selectedSoftware: boolean = false;
   public businessType: string = "";
-  public cropType: string = "";
+  public industryType: string = "";
+  public fabric: string = "";
   public location: string = "";
   public hasError: boolean = false;
   public enableSubmit: boolean = false;
@@ -40,14 +43,22 @@ export class SurveyComponent implements OnInit {
 
   public onSelectType(): void {
     this.reset();
-    this.displaySecondQuestion = this.businessType == "agriculture" ? true : false;
+    this.displaySecondQuestion = this.businessType == "textile" ? true : false;
     this.selectedSoftware = this.businessType == "software" ? true : false;
+    this.selectedAgri = this.businessType == "agriculture" ? true : false;
   }
 
-  public onSelectCrop(): void {
+  public onSelectIndustry(): void {
     this.location = "";
-    this.displayThirdQuestion = this.cropType.length ? true : false;
-    this.displayFourthQuestion = false;
+    this.fabric = "";
+    this.displayThirdQuestion = this.industryType.length ? true : false;
+    this.displayForthQuestion = false;
+  }
+
+  public onSelectFabric(): void {
+    this.location = "";
+    this.displayForthQuestion = this.industryType.length ? true : false;
+    this.displayFifthQuestion = false;
   }
 
   public onSelectLocation(): void {
@@ -55,16 +66,16 @@ export class SurveyComponent implements OnInit {
     var root = this;
     setTimeout(() => {
       root.appService.isLoading = false;
-      if(root.location != "california" && root.cropType == "grapes") {
+      if(root.location == "AK" && root.fabric == "cotton") {
         root.hasError = true;
         root.enableSubmit = false;
-        root.displayFourthQuestion = false;
+        root.displayFifthQuestion = false;
         return;
       }
   
-      if(root.location == "california") {
+      if(root.location == "AK" && root.fabric == "wool") {
         root.hasError = false;
-        root.displayFourthQuestion = true;
+        root.displayFifthQuestion = true;
       }
     }, 2000);
 
@@ -85,12 +96,12 @@ export class SurveyComponent implements OnInit {
   }
 
   private reset(): void {
-    this.cropType = "";
+    this.industryType = "";
     this.location = "";
     this.hasError = false;
     this.enableSubmit = false;
     this.inputCity = "";
-    this.displayFourthQuestion = false;
+    this.displayForthQuestion = false;
     this.displaySecondQuestion = false;
     this.displayThirdQuestion = false;
     this.selectedSoftware = false;
