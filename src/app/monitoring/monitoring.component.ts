@@ -28,15 +28,15 @@ export class MonitoringComponent implements OnInit {
 
   public newNotifications: Array<any> = [
     {
-      type: "HARVEST/STORAGE",
-      desc: "If grapes aren’t ripening, pinch back some of the foliage to let in more sunlight.",
+      type: "News",
+      desc: "The signs for wool look positive in Pitti Filati 90, the yarn show for Spring/Summer.",
       date: new Date(),
       isNew: true,
       style: 3
     },
     {
-      type: "RECOMMENDED VARIETIES",
-      desc: "Seedless varieties will produce smaller grapes.",
+      type: "News",
+      desc: "MEP Carlo Calenda and 29 colleagues delivered a letter to EC leaders, asking them to carefully consider upcoming textile legislation.",
       date: new Date(),
       isNew: true,
       style: 4
