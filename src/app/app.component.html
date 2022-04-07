@@ -1,7 +1,9 @@
 <div class="main-wrapper" [ngClass]="{'outer-page': isOuterPage}">
     <div *ngIf="!isOuterPage" class="side-nav">
         <div class="nav-logo">
-            <img width="100" src="assets/leap.png"/>
+            <a href="/dashboard">
+                <img width="100" src="assets/leap.png" />
+            </a>
         </div>
         <div class="side-nav-menu">
             <a routerLink="/dashboard" routerLinkActive="active-link">Home</a>

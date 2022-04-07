@@ -11,16 +11,16 @@ export class MonitoringComponent implements OnInit {
 
   public defaultNotifications: Array<any> = [
     {
-      type: "PLANTING",
-      desc: "Plant dormant, bare-root grape vines in the early spring.",
-      date: new Date("Dec, 16 2020 09:00 AM"),
+      type: "BRUSHING",
+      desc: "Using a soft garment brush, brush garments lengthwise after wearing to remove surface soil that might become stains later on.",
+      date: new Date("Apr, 07 2022 09:00 AM"),
       isNew: false,
       style: 1
     },
     {
       type: "CARE",
-      desc: "Do not fertilize in the first year unless you have problem soil. Fertilize lightly in the second year of growth.",
-      date: new Date("Dec, 16 2020 12:00 PM"),
+      desc: "Lighter wool fabrics may take a little longer to shed their creases. Remove wrinkles by ironing with a damp cloth or steam iron on a warm iron/dot 2 setting",
+      date: new Date("Apr, 07 2022 09:00 AM"),
       isNew: false,
       style: 2
     }
@@ -28,22 +28,22 @@ export class MonitoringComponent implements OnInit {
 
   public newNotifications: Array<any> = [
     {
-      type: "HARVEST/STORAGE",
-      desc: "If grapes aren’t ripening, pinch back some of the foliage to let in more sunlight.",
+      type: "AIRING",
+      desc: "To remove cigarette or food odours, lay wool garments flat on a bed or towel for an hour. Woven garments may be hung in fresh air on a suitable hanger.",
       date: new Date(),
       isNew: true,
       style: 3
     },
     {
-      type: "RECOMMENDED VARIETIES",
-      desc: "Seedless varieties will produce smaller grapes.",
+      type: "IRONING",
+      desc: "Many wool garments do not require ironing, but very smooth fabrics may look better if pressed. Always use steam when pressing wool. Set your iron on the wool setting and avoid ironing the fabric when it is totally dry.",
       date: new Date(),
       isNew: true,
       style: 4
     },
     {
-      type: "Pruning Grapes",
-      desc: "Pruning is very important. Grapes produce fruit on shoots growing off of one-year-old canes.",
+      type: "Long-term storage",
+      desc: "Since food stains and body oils attract moths, you should ensure your wool garment is clean before packing it away in airtight bags or containers. Ideally use a Woolmark-endorsed moth repellent but do not place directly on the garment.",
       date: new Date(),
       isNew: true,
       style: 5
@@ -93,4 +93,11 @@ export class MonitoringComponent implements OnInit {
     this.router.navigateByUrl("/marketing");
   }
 
+  public hidePopup(event : Event): void{
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      this.showHelpPopup = false;
+    }
+  }
 }
