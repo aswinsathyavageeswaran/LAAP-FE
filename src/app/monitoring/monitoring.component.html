@@ -1,4 +1,4 @@
-<app-nav title="Monitoring"></app-nav>
+<app-nav title="Monitoring" path="/monitoring"></app-nav>
 <div class="container pt-4" *ngIf="!appService.isLoading">
   <div class="row">
     <div class="col-12">
@@ -39,7 +39,7 @@
       <div class="graph-1"><img src="assets/us_textile.jpg" width="100%"></div>
       <h5 class="header-default mt-4">Import Trends of Fabrics from United States</h5>
       <div class="graph-1 mb-4"><img src="assets/importfabric.png" width="100%"></div>
-      <h5 class="header-default mt-4">Wool Market</h5>
+      <h5 class="header-default mt-4">Wool Market Statistics</h5>
       <div class="graph-1 mb-4"><img src="assets/wool_market.PNG" width="100%"></div>
     </div>   
     <div class="col-12">
@@ -50,14 +50,15 @@
 </div>
 
 
-<div class="loan-popup backdrop" *ngIf="showHelpPopup">
-  <div class="popup-div vendor-popup" *ngIf="showHelpPopup">
+<div class="loan-popup backdrop" *ngIf="showHelpPopup" (click)="showHelpPopup = false">
+  <div class="popup-div vendor-popup" *ngIf="showHelpPopup" (click)="$event.stopPropagation()">
+    <button class="close" mat-button (click)="showHelpPopup = false;">X</button>
     <h3 class="text-center">Don't Worry !!</h3>
     <p class="text-center mb-4">We are here to help you</p>
     <div class="row mt-4">
       <div class="col-12">
         <div class="mb-3">
-          <h5 class="card-title">What is cause of your issue </h5>
+          <h5 class="card-title">What is cause of your issue? </h5>
           <div class="row">
             <div class="col">
               <select class="custom-select" (change)="showAdvice = true;">

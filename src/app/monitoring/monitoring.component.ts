@@ -92,12 +92,4 @@ export class MonitoringComponent implements OnInit {
   public redirectToMarketing(): void {
     this.router.navigateByUrl("/marketing");
   }
-
-  public hidePopup(event : Event): void{
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-      this.showHelpPopup = false;
-    }
-  }
 }

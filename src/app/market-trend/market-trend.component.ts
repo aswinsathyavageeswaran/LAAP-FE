@@ -31,7 +31,7 @@ export class MarketTrendComponent implements OnInit {
   public confirmDeal(): void {
     this.openVendorPopup = false;
     this.appService.cycleNumber = this.appService.cycleNumber + 1;
-    this.router.navigateByUrl("/monitoring");
+    this.router.navigateByUrl("/marketing");
   }
 
   public qtyInputChanged(pricePerKg: number): void {
