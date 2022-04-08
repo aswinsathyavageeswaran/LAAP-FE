@@ -22,7 +22,7 @@ export class SuggestedVendorsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private appService: AppService
+    public appService: AppService
   ) { }
 
   ngOnInit() {

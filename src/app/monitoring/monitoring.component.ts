@@ -57,7 +57,7 @@ export class MonitoringComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private appService: AppService
+    public appService: AppService
   ) { }
 
   public ngOnInit(): void {
