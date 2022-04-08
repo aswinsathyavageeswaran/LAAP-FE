@@ -10,7 +10,6 @@ import { AppService } from '../app.service';
 export class NavComponent implements OnInit {
 
   @Input() title: string = "";
-  @Input() path: string = "/dashboard";
 
   public displayUserMenu: boolean = false;
   public user: any;
