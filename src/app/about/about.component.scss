@@ -9,27 +9,10 @@
 
     .application-video {
         position: absolute;
-        left: 654px;
-        top: 140px;
+        left: 653px;
+        top: 143px;
         z-index: 99;
-    }
-
-    .upper-overlay {
-        position: absolute;
-        left: 654px;
-        top: 120px;
-        background: #fff;
-        width: 397px;
-        height: 59px;
-    }
-
-    .bottom-overlay {
-        position: absolute;
-        left: 654px;
-        top: 290px;
-        background: #fff;
-        width: 397px;
-        height: 82px;
+        border: 1px solid #ebe8e8;
     }
 
     ul {
